@@ -1,0 +1,63 @@
+%h1 Listing characters
+
+%table
+  %thead
+    %tr
+      %th Charater class
+      %th Level
+      %th Hp
+      %th Max hp
+      %th Pp
+      %th Max pp
+      %th Xp
+      %th Skill points
+      %th Strength
+      %th Dexterity
+      %th Constitution
+      %th Intelligence
+      %th Wisdom
+      %th Charisma
+      %th Notes
+      %th Gm notes
+      %th Player
+      %th Homeworld
+      %th Background
+      %th Training
+      %th Credits
+      %th System strain
+      %th
+      %th
+      %th
+
+  %tbody
+    - @characters.each do |character|
+      %tr
+        %td= character.charater_class_id
+        %td= character.level
+        %td= character.hp
+        %td= character.max_hp
+        %td= character.pp
+        %td= character.max_pp
+        %td= character.xp
+        %td= character.skill_points
+        %td= character.strength
+        %td= character.dexterity
+        %td= character.constitution
+        %td= character.intelligence
+        %td= character.wisdom
+        %td= character.charisma
+        %td= character.notes
+        %td= character.gm_notes
+        %td= character.player_id
+        %td= character.homeworld_id
+        %td= character.background_id
+        %td= character.training_id
+        %td= character.credits
+        %td= character.system_strain
+        %td= link_to 'Show', character
+        %td= link_to 'Edit', edit_character_path(character)
+        %td= link_to 'Destroy', character, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Character', new_character_path

@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Item:
+  = @item_slot.item_id
+%p
+  %b Character:
+  = @item_slot.character_id
+%p
+  %b Uses:
+  = @item_slot.uses
+%p
+  %b Notes:
+  = @item_slot.notes
+%p
+  %b Gm notes:
+  = @item_slot.gm_notes
+
+= link_to 'Edit', edit_item_slot_path(@item_slot)
+\|
+= link_to 'Back', item_slots_path

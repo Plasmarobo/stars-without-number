@@ -1,0 +1,47 @@
+%h1 Listing ship_armors
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Cost
+      %th Power
+      %th Mass
+      %th Min hull class
+      %th Tech level
+      %th Ac bonus
+      %th Ac
+      %th Speed penalty
+      %th Ap reduction
+      %th Evasion chance
+      %th Phase reduction
+      %th Bonus hp
+      %th
+      %th
+      %th
+
+  %tbody
+    - @ship_armors.each do |ship_armor|
+      %tr
+        %td= ship_armor.name
+        %td= ship_armor.description
+        %td= ship_armor.cost
+        %td= ship_armor.power
+        %td= ship_armor.mass
+        %td= ship_armor.min_hull_class
+        %td= ship_armor.tech_level
+        %td= ship_armor.ac_bonus
+        %td= ship_armor.ac
+        %td= ship_armor.speed_penalty
+        %td= ship_armor.ap_reduction
+        %td= ship_armor.evasion_chance
+        %td= ship_armor.phase_reduction
+        %td= ship_armor.bonus_hp
+        %td= link_to 'Show', ship_armor
+        %td= link_to 'Edit', edit_ship_armor_path(ship_armor)
+        %td= link_to 'Destroy', ship_armor, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Ship armor', new_ship_armor_path

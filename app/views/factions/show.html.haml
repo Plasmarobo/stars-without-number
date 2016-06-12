@@ -1,0 +1,39 @@
+%p#notice= notice
+
+%p
+  %b Xp:
+  = @faction.xp
+%p
+  %b Name:
+  = @faction.name
+%p
+  %b Planet:
+  = @faction.planet_id
+%p
+  %b Force:
+  = @faction.force
+%p
+  %b Cunning:
+  = @faction.cunning
+%p
+  %b Wealth:
+  = @faction.wealth
+%p
+  %b Faccreds:
+  = @faction.faccreds
+%p
+  %b Goal:
+  = @faction.goal_id
+%p
+  %b Goal progress:
+  = @faction.goal_progress
+%p
+  %b Goal requirement:
+  = @faction.goal_requirement
+%p
+  %b User:
+  = @faction.user_id
+
+= link_to 'Edit', edit_faction_path(@faction)
+\|
+= link_to 'Back', factions_path

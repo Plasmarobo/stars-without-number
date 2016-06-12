@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @poi.name
+%p
+  %b Description:
+  = @poi.description
+%p
+  %b Orbit:
+  = @poi.orbit_id
+%p
+  %b Gm notes:
+  = @poi.gm_notes
+%p
+  %b Image src:
+  = @poi.image_src
+
+= link_to 'Edit', edit_poi_path(@poi)
+\|
+= link_to 'Back', pois_path

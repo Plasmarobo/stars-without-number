@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  faction_turn_id: 1
+  free: false
+  action: MyString
+
+two:
+  faction_turn_id: 1
+  free: false
+  action: MyString

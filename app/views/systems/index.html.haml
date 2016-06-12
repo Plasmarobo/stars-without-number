@@ -1,0 +1,33 @@
+%h1 Listing systems
+
+%table
+  %thead
+    %tr
+      %th X
+      %th Y
+      %th Name
+      %th Star size
+      %th Star temperature
+      %th Description
+      %th Gm notes
+      %th
+      %th
+      %th
+
+  %tbody
+    - @systems.each do |system|
+      %tr
+        %td= system.x
+        %td= system.y
+        %td= system.name
+        %td= system.star_size
+        %td= system.star_temperature
+        %td= system.description
+        %td= system.gm_notes
+        %td= link_to 'Show', system
+        %td= link_to 'Edit', edit_system_path(system)
+        %td= link_to 'Destroy', system, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New System', new_system_path

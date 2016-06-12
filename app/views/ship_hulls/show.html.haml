@@ -1,0 +1,48 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @ship_hull.name
+%p
+  %b Description:
+  = @ship_hull.description
+%p
+  %b Cost:
+  = @ship_hull.cost
+%p
+  %b Max hp:
+  = @ship_hull.max_hp
+%p
+  %b Min crew:
+  = @ship_hull.min_crew
+%p
+  %b Max crew:
+  = @ship_hull.max_crew
+%p
+  %b Max power:
+  = @ship_hull.max_power
+%p
+  %b Speed:
+  = @ship_hull.speed
+%p
+  %b Armor:
+  = @ship_hull.armor
+%p
+  %b Ac:
+  = @ship_hull.ac
+%p
+  %b Max mass:
+  = @ship_hull.max_mass
+%p
+  %b Hardpoints:
+  = @ship_hull.hardpoints
+%p
+  %b Hull class:
+  = @ship_hull.hull_class
+%p
+  %b Manufacturerer:
+  = @ship_hull.manufacturerer
+
+= link_to 'Edit', edit_ship_hull_path(@ship_hull)
+\|
+= link_to 'Back', ship_hulls_path

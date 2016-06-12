@@ -1,0 +1,25 @@
+= form_for @cargo_slot do |f|
+  - if @cargo_slot.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@cargo_slot.errors.count, "error")} prohibited this cargo_slot from being saved:"
+      %ul
+        - @cargo_slot.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :ship_id
+    = f.number_field :ship_id
+  .field
+    = f.label :cargo_id
+    = f.number_field :cargo_id
+  .field
+    = f.label :count
+    = f.number_field :count
+  .field
+    = f.label :notes
+    = f.text_field :notes
+  .field
+    = f.label :gm_notes
+    = f.text_field :gm_notes
+  .actions
+    = f.submit 'Save'

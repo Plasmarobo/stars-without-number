@@ -1,0 +1,42 @@
+%p#notice= notice
+
+%p
+  %b Max hp:
+  = @asset.max_hp
+%p
+  %b Asset type:
+  = @asset.asset_type
+%p
+  %b Attribute type:
+  = @asset.attribute_type
+%p
+  %b Cost:
+  = @asset.cost
+%p
+  %b Upkeep:
+  = @asset.upkeep
+%p
+  %b Tech level:
+  = @asset.tech_level
+%p
+  %b Asset level:
+  = @asset.asset_level
+%p
+  %b Attack attribute:
+  = @asset.attack_attribute
+%p
+  %b Defense attribute:
+  = @asset.defense_attribute
+%p
+  %b Attack roll:
+  = @asset.attack_roll
+%p
+  %b Counter roll:
+  = @asset.counter_roll
+%p
+  %b Special:
+  = @asset.special
+
+= link_to 'Edit', edit_asset_path(@asset)
+\|
+= link_to 'Back', assets_path

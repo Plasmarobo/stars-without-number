@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Character:
+  = @stowed_item_slot.character_id
+%p
+  %b Item slot:
+  = @stowed_item_slot.item_slot_id
+
+= link_to 'Edit', edit_stowed_item_slot_path(@stowed_item_slot)
+\|
+= link_to 'Back', stowed_item_slots_path

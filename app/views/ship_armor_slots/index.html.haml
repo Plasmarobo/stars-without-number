@@ -1,0 +1,23 @@
+%h1 Listing ship_armor_slots
+
+%table
+  %thead
+    %tr
+      %th Ship armor
+      %th Ship
+      %th
+      %th
+      %th
+
+  %tbody
+    - @ship_armor_slots.each do |ship_armor_slot|
+      %tr
+        %td= ship_armor_slot.ship_armor_id
+        %td= ship_armor_slot.ship_id
+        %td= link_to 'Show', ship_armor_slot
+        %td= link_to 'Edit', edit_ship_armor_slot_path(ship_armor_slot)
+        %td= link_to 'Destroy', ship_armor_slot, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Ship armor slot', new_ship_armor_slot_path

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  max_hp: 1
+  asset_type: MyString
+  attribute_type: MyString
+  cost: 1
+  upkeep: 1
+  tech_level: 1
+  asset_level: 1
+  attack_attribute: MyString
+  defense_attribute: MyString
+  attack_roll: MyString
+  counter_roll: MyString
+  special: MyString
+
+two:
+  max_hp: 1
+  asset_type: MyString
+  attribute_type: MyString
+  cost: 1
+  upkeep: 1
+  tech_level: 1
+  asset_level: 1
+  attack_attribute: MyString
+  defense_attribute: MyString
+  attack_roll: MyString
+  counter_roll: MyString
+  special: MyString

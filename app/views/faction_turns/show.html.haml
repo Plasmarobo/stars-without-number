@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Turn number:
+  = @faction_turn.turn_number
+%p
+  %b Game:
+  = @faction_turn.game_id
+%p
+  %b Order:
+  = @faction_turn.order
+
+= link_to 'Edit', edit_faction_turn_path(@faction_turn)
+\|
+= link_to 'Back', faction_turns_path

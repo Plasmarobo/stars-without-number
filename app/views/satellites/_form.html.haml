@@ -1,0 +1,34 @@
+= form_for @satellite do |f|
+  - if @satellite.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@satellite.errors.count, "error")} prohibited this satellite from being saved:"
+      %ul
+        - @satellite.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :x
+    = f.number_field :x
+  .field
+    = f.label :y
+    = f.number_field :y
+  .field
+    = f.label :planet_id
+    = f.number_field :planet_id
+  .field
+    = f.label :poi_id
+    = f.number_field :poi_id
+  .field
+    = f.label :orbit_id
+    = f.number_field :orbit_id
+  .field
+    = f.label :description
+    = f.text_field :description
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :gm_notes
+    = f.text_field :gm_notes
+  .actions
+    = f.submit 'Save'

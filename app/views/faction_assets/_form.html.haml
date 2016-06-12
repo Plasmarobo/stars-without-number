@@ -1,0 +1,31 @@
+= form_for @faction_asset do |f|
+  - if @faction_asset.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@faction_asset.errors.count, "error")} prohibited this faction_asset from being saved:"
+      %ul
+        - @faction_asset.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :maintained
+    = f.check_box :maintained
+  .field
+    = f.label :disabled
+    = f.check_box :disabled
+  .field
+    = f.label :asset_id
+    = f.number_field :asset_id
+  .field
+    = f.label :hp
+    = f.number_field :hp
+  .field
+    = f.label :faction_id
+    = f.number_field :faction_id
+  .field
+    = f.label :gm_notes
+    = f.text_field :gm_notes
+  .field
+    = f.label :notes
+    = f.text_field :notes
+  .actions
+    = f.submit 'Save'

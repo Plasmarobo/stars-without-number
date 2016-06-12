@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @sector.name
+%p
+  %b Width:
+  = @sector.width
+%p
+  %b Height:
+  = @sector.height
+%p
+  %b Image src:
+  = @sector.image_src
+%p
+  %b Seed:
+  = @sector.seed
+
+= link_to 'Edit', edit_sector_path(@sector)
+\|
+= link_to 'Back', sectors_path

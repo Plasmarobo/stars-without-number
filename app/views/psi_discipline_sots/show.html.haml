@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Character:
+  = @psi_discipline_sot.character_id
+%p
+  %b Psi discipline:
+  = @psi_discipline_sot.psi_discipline_id
+
+= link_to 'Edit', edit_psi_discipline_sot_path(@psi_discipline_sot)
+\|
+= link_to 'Back', psi_discipline_sots_path

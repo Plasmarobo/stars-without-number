@@ -1,0 +1,29 @@
+%h1 Listing cargo_slots
+
+%table
+  %thead
+    %tr
+      %th Ship
+      %th Cargo
+      %th Count
+      %th Notes
+      %th Gm notes
+      %th
+      %th
+      %th
+
+  %tbody
+    - @cargo_slots.each do |cargo_slot|
+      %tr
+        %td= cargo_slot.ship_id
+        %td= cargo_slot.cargo_id
+        %td= cargo_slot.count
+        %td= cargo_slot.notes
+        %td= cargo_slot.gm_notes
+        %td= link_to 'Show', cargo_slot
+        %td= link_to 'Edit', edit_cargo_slot_path(cargo_slot)
+        %td= link_to 'Destroy', cargo_slot, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Cargo slot', new_cargo_slot_path

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  body: MyString
+  x: 1
+  'y': 1
+  planet_id: 1
+  system_id: 1
+  faction_id: 1
+  player_id: 1
+  npc_id: 1
+  ship_id: 1
+  fleet_id: 1
+  tags: MyString
+
+two:
+  title: MyString
+  body: MyString
+  x: 1
+  'y': 1
+  planet_id: 1
+  system_id: 1
+  faction_id: 1
+  player_id: 1
+  npc_id: 1
+  ship_id: 1
+  fleet_id: 1
+  tags: MyString

@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Training:
+  = @training_skill.training_id
+%p
+  %b Skill:
+  = @training_skill.skill_id
+
+= link_to 'Edit', edit_training_skill_path(@training_skill)
+\|
+= link_to 'Back', training_skills_path

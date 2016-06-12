@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Hp:
+  = @ship.hp
+%p
+  %b Free power:
+  = @ship.free_power
+%p
+  %b Free mass:
+  = @ship.free_mass
+%p
+  %b Ship hull:
+  = @ship.ship_hull_id
+
+= link_to 'Edit', edit_ship_path(@ship)
+\|
+= link_to 'Back', ships_path

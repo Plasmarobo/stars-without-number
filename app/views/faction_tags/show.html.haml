@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Faction:
+  = @faction_tag.faction_id
+%p
+  %b Tag:
+  = @faction_tag.tag_id
+
+= link_to 'Edit', edit_faction_tag_path(@faction_tag)
+\|
+= link_to 'Back', faction_tags_path

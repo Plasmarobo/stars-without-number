@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b System:
+  = @fleet.system_id
+%p
+  %b Planet:
+  = @fleet.planet_id
+%p
+  %b Poi:
+  = @fleet.poi_id
+%p
+  %b Faction:
+  = @fleet.faction_id
+%p
+  %b Speed:
+  = @fleet.speed
+
+= link_to 'Edit', edit_fleet_path(@fleet)
+\|
+= link_to 'Back', fleets_path

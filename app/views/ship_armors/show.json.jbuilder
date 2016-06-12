@@ -1,0 +1,1 @@
+json.extract! @ship_armor, :id, :name, :description, :cost, :power, :mass, :min_hull_class, :tech_level, :ac_bonus, :ac, :speed_penalty, :ap_reduction, :evasion_chance, :phase_reduction, :bonus_hp, :created_at, :updated_at

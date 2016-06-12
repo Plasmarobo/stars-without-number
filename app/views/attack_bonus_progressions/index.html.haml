@@ -1,0 +1,25 @@
+%h1 Listing attack_bonus_progressions
+
+%table
+  %thead
+    %tr
+      %th Character class
+      %th Level
+      %th Attack bonus
+      %th
+      %th
+      %th
+
+  %tbody
+    - @attack_bonus_progressions.each do |attack_bonus_progression|
+      %tr
+        %td= attack_bonus_progression.character_class_id
+        %td= attack_bonus_progression.level
+        %td= attack_bonus_progression.attack_bonus
+        %td= link_to 'Show', attack_bonus_progression
+        %td= link_to 'Edit', edit_attack_bonus_progression_path(attack_bonus_progression)
+        %td= link_to 'Destroy', attack_bonus_progression, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Attack bonus progression', new_attack_bonus_progression_path

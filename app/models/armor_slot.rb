@@ -1,0 +1,2 @@
+class ArmorSlot < ApplicationRecord
+end

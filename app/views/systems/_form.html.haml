@@ -1,0 +1,31 @@
+= form_for @system do |f|
+  - if @system.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@system.errors.count, "error")} prohibited this system from being saved:"
+      %ul
+        - @system.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :x
+    = f.number_field :x
+  .field
+    = f.label :y
+    = f.number_field :y
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :star_size
+    = f.number_field :star_size
+  .field
+    = f.label :star_temperature
+    = f.number_field :star_temperature
+  .field
+    = f.label :description
+    = f.text_field :description
+  .field
+    = f.label :gm_notes
+    = f.text_field :gm_notes
+  .actions
+    = f.submit 'Save'

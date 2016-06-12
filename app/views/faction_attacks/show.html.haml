@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Attacker:
+  = @faction_attack.attacker_id
+%p
+  %b Defender:
+  = @faction_attack.defender_id
+%p
+  %b Attack roll:
+  = @faction_attack.attack_roll
+%p
+  %b Defense roll:
+  = @faction_attack.defense_roll
+%p
+  %b Attack:
+  = @faction_attack.attack
+%p
+  %b Defense:
+  = @faction_attack.defense
+%p
+  %b Counter:
+  = @faction_attack.counter
+
+= link_to 'Edit', edit_faction_attack_path(@faction_attack)
+\|
+= link_to 'Back', faction_attacks_path

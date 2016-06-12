@@ -1,0 +1,43 @@
+= form_for @npc do |f|
+  - if @npc.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@npc.errors.count, "error")} prohibited this npc from being saved:"
+      %ul
+        - @npc.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :character_id
+    = f.number_field :character_id
+  .field
+    = f.label :faction_id
+    = f.number_field :faction_id
+  .field
+    = f.label :planet_id
+    = f.text_field :planet_id
+  .field
+    = f.label :location_id
+    = f.number_field :location_id
+  .field
+    = f.label :satellite_id
+    = f.number_field :satellite_id
+  .field
+    = f.label :poi_id
+    = f.number_field :poi_id
+  .field
+    = f.label :ship_id
+    = f.number_field :ship_id
+  .field
+    = f.label :notes
+    = f.text_field :notes
+  .field
+    = f.label :gm_notes
+    = f.text_field :gm_notes
+  .field
+    = f.label :description
+    = f.text_field :description
+  .actions
+    = f.submit 'Save'

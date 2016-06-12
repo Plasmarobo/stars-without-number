@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Character:
+  = @skill_slot.character_id
+%p
+  %b Background:
+  = @skill_slot.background_id
+%p
+  %b Training:
+  = @skill_slot.training_id
+%p
+  %b Skill:
+  = @skill_slot.skill_id
+%p
+  %b Rank:
+  = @skill_slot.rank
+
+= link_to 'Edit', edit_skill_slot_path(@skill_slot)
+\|
+= link_to 'Back', skill_slots_path

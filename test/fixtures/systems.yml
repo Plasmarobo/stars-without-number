@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  x: 1
+  'y': 1
+  name: MyString
+  star_size: 1
+  star_temperature: 1
+  description: MyString
+  gm_notes: MyString
+
+two:
+  x: 1
+  'y': 1
+  name: MyString
+  star_size: 1
+  star_temperature: 1
+  description: MyString
+  gm_notes: MyString

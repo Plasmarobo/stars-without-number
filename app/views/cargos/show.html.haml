@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Item:
+  = @cargo.item_id
+%p
+  %b Name:
+  = @cargo.name
+%p
+  %b Description:
+  = @cargo.description
+%p
+  %b Cost:
+  = @cargo.cost
+%p
+  %b Mass:
+  = @cargo.mass
+%p
+  %b Count:
+  = @cargo.count
+
+= link_to 'Edit', edit_cargo_path(@cargo)
+\|
+= link_to 'Back', cargos_path

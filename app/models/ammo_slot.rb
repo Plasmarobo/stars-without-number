@@ -1,0 +1,2 @@
+class AmmoSlot < ApplicationRecord
+end

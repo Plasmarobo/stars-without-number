@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Character:
+  = @ammo_slot.character_id
+%p
+  %b Weapon slot:
+  = @ammo_slot.weapon_slot_id
+%p
+  %b Ship weapon slot:
+  = @ammo_slot.ship_weapon_slot_id
+%p
+  %b Item slot:
+  = @ammo_slot.item_slot_id
+%p
+  %b Rounds fired:
+  = @ammo_slot.rounds_fired
+%p
+  %b Cargo slot:
+  = @ammo_slot.cargo_slot_id
+
+= link_to 'Edit', edit_ammo_slot_path(@ammo_slot)
+\|
+= link_to 'Back', ammo_slots_path

@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Character class:
+  = @mental_save_progression.character_class_id
+%p
+  %b Level:
+  = @mental_save_progression.level
+%p
+  %b Mental save:
+  = @mental_save_progression.mental_save
+
+= link_to 'Edit', edit_mental_save_progression_path(@mental_save_progression)
+\|
+= link_to 'Back', mental_save_progressions_path

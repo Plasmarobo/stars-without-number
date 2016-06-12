@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Character class:
+  = @level_progression.character_class_id
+%p
+  %b Level:
+  = @level_progression.level
+%p
+  %b Xp requirement:
+  = @level_progression.xp_requirement
+
+= link_to 'Edit', edit_level_progression_path(@level_progression)
+\|
+= link_to 'Back', level_progressions_path

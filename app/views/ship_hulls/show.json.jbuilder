@@ -1,0 +1,1 @@
+json.extract! @ship_hull, :id, :name, :description, :cost, :max_hp, :min_crew, :max_crew, :max_power, :speed, :armor, :ac, :max_mass, :hardpoints, :hull_class, :manufacturerer, :created_at, :updated_at

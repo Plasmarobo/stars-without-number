@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  character_id: 1
+  faction_id: 1
+  planet_id: 
+  location_id: 1
+  satellite_id: 1
+  poi_id: 1
+  ship_id: 1
+  notes: MyString
+  gm_notes: MyString
+  description: MyString
+
+two:
+  name: MyString
+  character_id: 1
+  faction_id: 1
+  planet_id: 
+  location_id: 1
+  satellite_id: 1
+  poi_id: 1
+  ship_id: 1
+  notes: MyString
+  gm_notes: MyString
+  description: MyString

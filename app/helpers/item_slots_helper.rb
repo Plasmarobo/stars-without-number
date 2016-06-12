@@ -1,0 +1,2 @@
+module ItemSlotsHelper
+end

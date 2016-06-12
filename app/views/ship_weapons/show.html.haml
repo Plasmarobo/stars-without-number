@@ -1,0 +1,48 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @ship_weapon.name
+%p
+  %b Description:
+  = @ship_weapon.description
+%p
+  %b Cost:
+  = @ship_weapon.cost
+%p
+  %b Damage:
+  = @ship_weapon.damage
+%p
+  %b Power:
+  = @ship_weapon.power
+%p
+  %b Mass:
+  = @ship_weapon.mass
+%p
+  %b Hardpoint use:
+  = @ship_weapon.hardpoint_use
+%p
+  %b Min hull class:
+  = @ship_weapon.min_hull_class
+%p
+  %b Tech level:
+  = @ship_weapon.tech_level
+%p
+  %b Ap:
+  = @ship_weapon.ap
+%p
+  %b Clumsy:
+  = @ship_weapon.clumsy
+%p
+  %b Ammo:
+  = @ship_weapon.ammo_id
+%p
+  %b Phase rating:
+  = @ship_weapon.phase_rating
+%p
+  %b Cloud:
+  = @ship_weapon.cloud
+
+= link_to 'Edit', edit_ship_weapon_path(@ship_weapon)
+\|
+= link_to 'Back', ship_weapons_path

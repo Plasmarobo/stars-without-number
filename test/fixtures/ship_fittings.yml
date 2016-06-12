@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  cost: 1
+  power: 1
+  mass: 1
+  min_hull_class: 1
+  max_hull_class: 1
+  tech_level: 1
+  notes: MyString
+  gm_notes: MyString
+
+two:
+  name: MyString
+  description: MyString
+  cost: 1
+  power: 1
+  mass: 1
+  min_hull_class: 1
+  max_hull_class: 1
+  tech_level: 1
+  notes: MyString
+  gm_notes: MyString

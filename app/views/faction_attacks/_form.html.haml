@@ -1,0 +1,31 @@
+= form_for @faction_attack do |f|
+  - if @faction_attack.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@faction_attack.errors.count, "error")} prohibited this faction_attack from being saved:"
+      %ul
+        - @faction_attack.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :attacker_id
+    = f.number_field :attacker_id
+  .field
+    = f.label :defender_id
+    = f.number_field :defender_id
+  .field
+    = f.label :attack_roll
+    = f.text_field :attack_roll
+  .field
+    = f.label :defense_roll
+    = f.text_field :defense_roll
+  .field
+    = f.label :attack
+    = f.number_field :attack
+  .field
+    = f.label :defense
+    = f.number_field :defense
+  .field
+    = f.label :counter
+    = f.check_box :counter
+  .actions
+    = f.submit 'Save'

@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Character class:
+  = @technology_save_progression.character_class_id
+%p
+  %b Level:
+  = @technology_save_progression.level
+%p
+  %b Technology save:
+  = @technology_save_progression.technology_save
+
+= link_to 'Edit', edit_technology_save_progression_path(@technology_save_progression)
+\|
+= link_to 'Back', technology_save_progressions_path

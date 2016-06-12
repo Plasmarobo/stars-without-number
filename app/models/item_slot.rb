@@ -1,0 +1,2 @@
+class ItemSlot < ApplicationRecord
+end

@@ -1,0 +1,52 @@
+= form_for @ship_armor do |f|
+  - if @ship_armor.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@ship_armor.errors.count, "error")} prohibited this ship_armor from being saved:"
+      %ul
+        - @ship_armor.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :description
+    = f.text_field :description
+  .field
+    = f.label :cost
+    = f.number_field :cost
+  .field
+    = f.label :power
+    = f.number_field :power
+  .field
+    = f.label :mass
+    = f.number_field :mass
+  .field
+    = f.label :min_hull_class
+    = f.number_field :min_hull_class
+  .field
+    = f.label :tech_level
+    = f.number_field :tech_level
+  .field
+    = f.label :ac_bonus
+    = f.number_field :ac_bonus
+  .field
+    = f.label :ac
+    = f.number_field :ac
+  .field
+    = f.label :speed_penalty
+    = f.number_field :speed_penalty
+  .field
+    = f.label :ap_reduction
+    = f.number_field :ap_reduction
+  .field
+    = f.label :evasion_chance
+    = f.number_field :evasion_chance
+  .field
+    = f.label :phase_reduction
+    = f.number_field :phase_reduction
+  .field
+    = f.label :bonus_hp
+    = f.number_field :bonus_hp
+  .actions
+    = f.submit 'Save'

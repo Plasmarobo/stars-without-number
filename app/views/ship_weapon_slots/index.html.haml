@@ -1,0 +1,25 @@
+%h1 Listing ship_weapon_slots
+
+%table
+  %thead
+    %tr
+      %th Ship weapon
+      %th Ship
+      %th Ammo slot
+      %th
+      %th
+      %th
+
+  %tbody
+    - @ship_weapon_slots.each do |ship_weapon_slot|
+      %tr
+        %td= ship_weapon_slot.ship_weapon_id
+        %td= ship_weapon_slot.ship_id
+        %td= ship_weapon_slot.ammo_slot_id
+        %td= link_to 'Show', ship_weapon_slot
+        %td= link_to 'Edit', edit_ship_weapon_slot_path(ship_weapon_slot)
+        %td= link_to 'Destroy', ship_weapon_slot, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Ship weapon slot', new_ship_weapon_slot_path

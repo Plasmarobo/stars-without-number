@@ -1,0 +1,25 @@
+%h1 Listing faction_turns
+
+%table
+  %thead
+    %tr
+      %th Turn number
+      %th Game
+      %th Order
+      %th
+      %th
+      %th
+
+  %tbody
+    - @faction_turns.each do |faction_turn|
+      %tr
+        %td= faction_turn.turn_number
+        %td= faction_turn.game_id
+        %td= faction_turn.order
+        %td= link_to 'Show', faction_turn
+        %td= link_to 'Edit', edit_faction_turn_path(faction_turn)
+        %td= link_to 'Destroy', faction_turn, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Faction turn', new_faction_turn_path

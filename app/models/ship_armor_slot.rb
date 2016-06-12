@@ -1,0 +1,2 @@
+class ShipArmorSlot < ApplicationRecord
+end

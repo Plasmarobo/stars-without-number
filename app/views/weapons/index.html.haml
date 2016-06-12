@@ -1,0 +1,45 @@
+%h1 Listing weapons
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Attack attribute
+      %th Damage
+      %th Cost
+      %th Range
+      %th Ammo efficiency
+      %th Ammo
+      %th Long reload
+      %th Tech level
+      %th Psitech
+      %th Encumberance
+      %th Heavy weapon
+      %th
+      %th
+      %th
+
+  %tbody
+    - @weapons.each do |weapon|
+      %tr
+        %td= weapon.name
+        %td= weapon.description
+        %td= weapon.attack_attribute
+        %td= weapon.damage
+        %td= weapon.cost
+        %td= weapon.range
+        %td= weapon.ammo_efficiency
+        %td= weapon.ammo_id
+        %td= weapon.long_reload
+        %td= weapon.tech_level
+        %td= weapon.psitech
+        %td= weapon.encumberance
+        %td= weapon.heavy_weapon
+        %td= link_to 'Show', weapon
+        %td= link_to 'Edit', edit_weapon_path(weapon)
+        %td= link_to 'Destroy', weapon, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Weapon', new_weapon_path

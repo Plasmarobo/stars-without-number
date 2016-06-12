@@ -1,0 +1,27 @@
+%h1 Listing vehicle_slots
+
+%table
+  %thead
+    %tr
+      %th Vehicle
+      %th Hp
+      %th Character
+      %th Ship
+      %th
+      %th
+      %th
+
+  %tbody
+    - @vehicle_slots.each do |vehicle_slot|
+      %tr
+        %td= vehicle_slot.vehicle_id
+        %td= vehicle_slot.hp
+        %td= vehicle_slot.character_id
+        %td= vehicle_slot.ship_id
+        %td= link_to 'Show', vehicle_slot
+        %td= link_to 'Edit', edit_vehicle_slot_path(vehicle_slot)
+        %td= link_to 'Destroy', vehicle_slot, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Vehicle slot', new_vehicle_slot_path

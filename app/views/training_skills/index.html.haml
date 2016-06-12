@@ -1,0 +1,23 @@
+%h1 Listing training_skills
+
+%table
+  %thead
+    %tr
+      %th Training
+      %th Skill
+      %th
+      %th
+      %th
+
+  %tbody
+    - @training_skills.each do |training_skill|
+      %tr
+        %td= training_skill.training_id
+        %td= training_skill.skill_id
+        %td= link_to 'Show', training_skill
+        %td= link_to 'Edit', edit_training_skill_path(training_skill)
+        %td= link_to 'Destroy', training_skill, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Training skill', new_training_skill_path

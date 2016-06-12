@@ -1,0 +1,31 @@
+%h1 Listing ammo_slots
+
+%table
+  %thead
+    %tr
+      %th Character
+      %th Weapon slot
+      %th Ship weapon slot
+      %th Item slot
+      %th Rounds fired
+      %th Cargo slot
+      %th
+      %th
+      %th
+
+  %tbody
+    - @ammo_slots.each do |ammo_slot|
+      %tr
+        %td= ammo_slot.character_id
+        %td= ammo_slot.weapon_slot_id
+        %td= ammo_slot.ship_weapon_slot_id
+        %td= ammo_slot.item_slot_id
+        %td= ammo_slot.rounds_fired
+        %td= ammo_slot.cargo_slot_id
+        %td= link_to 'Show', ammo_slot
+        %td= link_to 'Edit', edit_ammo_slot_path(ammo_slot)
+        %td= link_to 'Destroy', ammo_slot, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Ammo slot', new_ammo_slot_path

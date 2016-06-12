@@ -1,0 +1,2 @@
+class FactionAsset < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+module SkillSlotsHelper
+end

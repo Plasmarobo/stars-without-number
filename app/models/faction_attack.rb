@@ -1,0 +1,2 @@
+class FactionAttack < ApplicationRecord
+end

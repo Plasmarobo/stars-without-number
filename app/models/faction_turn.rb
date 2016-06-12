@@ -1,0 +1,2 @@
+class FactionTurn < ApplicationRecord
+end

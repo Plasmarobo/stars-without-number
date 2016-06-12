@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @psi_discipline.name
+%p
+  %b Description:
+  = @psi_discipline.description
+%p
+  %b Cost:
+  = @psi_discipline.cost
+%p
+  %b System strain:
+  = @psi_discipline.system_strain
+%p
+  %b Attack:
+  = @psi_discipline.attack
+%p
+  %b Defense:
+  = @psi_discipline.defense
+%p
+  %b Level:
+  = @psi_discipline.level
+
+= link_to 'Edit', edit_psi_discipline_path(@psi_discipline)
+\|
+= link_to 'Back', psi_disciplines_path

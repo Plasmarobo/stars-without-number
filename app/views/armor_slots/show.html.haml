@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Armor:
+  = @armor_slot.armor_id
+%p
+  %b Character:
+  = @armor_slot.character_id
+%p
+  %b Ammo slot:
+  = @armor_slot.ammo_slot_id
+%p
+  %b Item:
+  = @armor_slot.item_id
+
+= link_to 'Edit', edit_armor_slot_path(@armor_slot)
+\|
+= link_to 'Back', armor_slots_path

@@ -1,0 +1,35 @@
+%h1 Listing satellites
+
+%table
+  %thead
+    %tr
+      %th X
+      %th Y
+      %th Planet
+      %th Poi
+      %th Orbit
+      %th Description
+      %th Name
+      %th Gm notes
+      %th
+      %th
+      %th
+
+  %tbody
+    - @satellites.each do |satellite|
+      %tr
+        %td= satellite.x
+        %td= satellite.y
+        %td= satellite.planet_id
+        %td= satellite.poi_id
+        %td= satellite.orbit_id
+        %td= satellite.description
+        %td= satellite.name
+        %td= satellite.gm_notes
+        %td= link_to 'Show', satellite
+        %td= link_to 'Edit', edit_satellite_path(satellite)
+        %td= link_to 'Destroy', satellite, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Satellite', new_satellite_path

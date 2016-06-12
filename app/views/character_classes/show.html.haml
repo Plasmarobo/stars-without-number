@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @character_class.name
+%p
+  %b Description:
+  = @character_class.description
+%p
+  %b Gm notes:
+  = @character_class.gm_notes
+
+= link_to 'Edit', edit_character_class_path(@character_class)
+\|
+= link_to 'Back', character_classes_path

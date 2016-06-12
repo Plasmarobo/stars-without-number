@@ -1,0 +1,43 @@
+%h1 Listing events
+
+%table
+  %thead
+    %tr
+      %th Title
+      %th Body
+      %th X
+      %th Y
+      %th Planet
+      %th System
+      %th Faction
+      %th Player
+      %th Npc
+      %th Ship
+      %th Fleet
+      %th Tags
+      %th
+      %th
+      %th
+
+  %tbody
+    - @events.each do |event|
+      %tr
+        %td= event.title
+        %td= event.body
+        %td= event.x
+        %td= event.y
+        %td= event.planet_id
+        %td= event.system_id
+        %td= event.faction_id
+        %td= event.player_id
+        %td= event.npc_id
+        %td= event.ship_id
+        %td= event.fleet_id
+        %td= event.tags
+        %td= link_to 'Show', event
+        %td= link_to 'Edit', edit_event_path(event)
+        %td= link_to 'Destroy', event, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Event', new_event_path

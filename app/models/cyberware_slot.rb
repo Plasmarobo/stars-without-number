@@ -1,0 +1,2 @@
+class CyberwareSlot < ApplicationRecord
+end

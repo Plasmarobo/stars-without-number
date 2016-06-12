@@ -1,0 +1,36 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @ship_fitting.name
+%p
+  %b Description:
+  = @ship_fitting.description
+%p
+  %b Cost:
+  = @ship_fitting.cost
+%p
+  %b Power:
+  = @ship_fitting.power
+%p
+  %b Mass:
+  = @ship_fitting.mass
+%p
+  %b Min hull class:
+  = @ship_fitting.min_hull_class
+%p
+  %b Max hull class:
+  = @ship_fitting.max_hull_class
+%p
+  %b Tech level:
+  = @ship_fitting.tech_level
+%p
+  %b Notes:
+  = @ship_fitting.notes
+%p
+  %b Gm notes:
+  = @ship_fitting.gm_notes
+
+= link_to 'Edit', edit_ship_fitting_path(@ship_fitting)
+\|
+= link_to 'Back', ship_fittings_path

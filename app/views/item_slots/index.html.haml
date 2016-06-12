@@ -1,0 +1,29 @@
+%h1 Listing item_slots
+
+%table
+  %thead
+    %tr
+      %th Item
+      %th Character
+      %th Uses
+      %th Notes
+      %th Gm notes
+      %th
+      %th
+      %th
+
+  %tbody
+    - @item_slots.each do |item_slot|
+      %tr
+        %td= item_slot.item_id
+        %td= item_slot.character_id
+        %td= item_slot.uses
+        %td= item_slot.notes
+        %td= item_slot.gm_notes
+        %td= link_to 'Show', item_slot
+        %td= link_to 'Edit', edit_item_slot_path(item_slot)
+        %td= link_to 'Destroy', item_slot, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Item slot', new_item_slot_path

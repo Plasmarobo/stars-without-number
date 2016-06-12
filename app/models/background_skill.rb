@@ -1,0 +1,2 @@
+class BackgroundSkill < ApplicationRecord
+end

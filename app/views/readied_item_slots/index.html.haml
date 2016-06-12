@@ -1,0 +1,23 @@
+%h1 Listing readied_item_slots
+
+%table
+  %thead
+    %tr
+      %th Character
+      %th Item slot
+      %th
+      %th
+      %th
+
+  %tbody
+    - @readied_item_slots.each do |readied_item_slot|
+      %tr
+        %td= readied_item_slot.character_id
+        %td= readied_item_slot.item_slot_id
+        %td= link_to 'Show', readied_item_slot
+        %td= link_to 'Edit', edit_readied_item_slot_path(readied_item_slot)
+        %td= link_to 'Destroy', readied_item_slot, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Readied item slot', new_readied_item_slot_path

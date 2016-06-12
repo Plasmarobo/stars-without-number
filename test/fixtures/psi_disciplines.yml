@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  cost: 1
+  system_strain: 1
+  attack: MyString
+  defense: MyString
+  level: 1
+
+two:
+  name: MyString
+  description: MyString
+  cost: 1
+  system_strain: 1
+  attack: MyString
+  defense: MyString
+  level: 1

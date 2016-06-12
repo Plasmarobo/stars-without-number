@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: 1
+  orbit_id: 1
+  gm_notes: MyString
+  image_src: MyString
+
+two:
+  name: MyString
+  description: 1
+  orbit_id: 1
+  gm_notes: MyString
+  image_src: MyString

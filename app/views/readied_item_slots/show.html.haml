@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Character:
+  = @readied_item_slot.character_id
+%p
+  %b Item slot:
+  = @readied_item_slot.item_slot_id
+
+= link_to 'Edit', edit_readied_item_slot_path(@readied_item_slot)
+\|
+= link_to 'Back', readied_item_slots_path

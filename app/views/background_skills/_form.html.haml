@@ -1,0 +1,16 @@
+= form_for @background_skill do |f|
+  - if @background_skill.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@background_skill.errors.count, "error")} prohibited this background_skill from being saved:"
+      %ul
+        - @background_skill.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :background_id
+    = f.number_field :background_id
+  .field
+    = f.label :skill_id
+    = f.number_field :skill_id
+  .actions
+    = f.submit 'Save'

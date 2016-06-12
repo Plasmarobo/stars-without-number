@@ -1,0 +1,47 @@
+%h1 Listing ship_hulls
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Cost
+      %th Max hp
+      %th Min crew
+      %th Max crew
+      %th Max power
+      %th Speed
+      %th Armor
+      %th Ac
+      %th Max mass
+      %th Hardpoints
+      %th Hull class
+      %th Manufacturerer
+      %th
+      %th
+      %th
+
+  %tbody
+    - @ship_hulls.each do |ship_hull|
+      %tr
+        %td= ship_hull.name
+        %td= ship_hull.description
+        %td= ship_hull.cost
+        %td= ship_hull.max_hp
+        %td= ship_hull.min_crew
+        %td= ship_hull.max_crew
+        %td= ship_hull.max_power
+        %td= ship_hull.speed
+        %td= ship_hull.armor
+        %td= ship_hull.ac
+        %td= ship_hull.max_mass
+        %td= ship_hull.hardpoints
+        %td= ship_hull.hull_class
+        %td= ship_hull.manufacturerer
+        %td= link_to 'Show', ship_hull
+        %td= link_to 'Edit', edit_ship_hull_path(ship_hull)
+        %td= link_to 'Destroy', ship_hull, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Ship hull', new_ship_hull_path

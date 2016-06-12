@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Vehicle:
+  = @vehicle_slot.vehicle_id
+%p
+  %b Hp:
+  = @vehicle_slot.hp
+%p
+  %b Character:
+  = @vehicle_slot.character_id
+%p
+  %b Ship:
+  = @vehicle_slot.ship_id
+
+= link_to 'Edit', edit_vehicle_slot_path(@vehicle_slot)
+\|
+= link_to 'Back', vehicle_slots_path

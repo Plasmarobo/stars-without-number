@@ -1,0 +1,45 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @weapon.name
+%p
+  %b Description:
+  = @weapon.description
+%p
+  %b Attack attribute:
+  = @weapon.attack_attribute
+%p
+  %b Damage:
+  = @weapon.damage
+%p
+  %b Cost:
+  = @weapon.cost
+%p
+  %b Range:
+  = @weapon.range
+%p
+  %b Ammo efficiency:
+  = @weapon.ammo_efficiency
+%p
+  %b Ammo:
+  = @weapon.ammo_id
+%p
+  %b Long reload:
+  = @weapon.long_reload
+%p
+  %b Tech level:
+  = @weapon.tech_level
+%p
+  %b Psitech:
+  = @weapon.psitech
+%p
+  %b Encumberance:
+  = @weapon.encumberance
+%p
+  %b Heavy weapon:
+  = @weapon.heavy_weapon
+
+= link_to 'Edit', edit_weapon_path(@weapon)
+\|
+= link_to 'Back', weapons_path

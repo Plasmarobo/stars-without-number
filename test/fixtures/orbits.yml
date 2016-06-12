@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  distance: 1
+  period: 1.5
+  angle: 1.5
+  index: 1
+
+two:
+  distance: 1
+  period: 1.5
+  angle: 1.5
+  index: 1

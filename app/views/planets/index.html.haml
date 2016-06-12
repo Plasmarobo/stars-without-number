@@ -1,0 +1,45 @@
+%h1 Listing planets
+
+%table
+  %thead
+    %tr
+      %th X
+      %th Y
+      %th Name
+      %th Atmosphere
+      %th Temperature
+      %th Biosphere
+      %th Tech level
+      %th Population
+      %th Type index
+      %th Description
+      %th Gm notes
+      %th Image src
+      %th Orbit
+      %th
+      %th
+      %th
+
+  %tbody
+    - @planets.each do |planet|
+      %tr
+        %td= planet.x
+        %td= planet.y
+        %td= planet.name
+        %td= planet.atmosphere
+        %td= planet.temperature
+        %td= planet.biosphere
+        %td= planet.tech_level
+        %td= planet.population
+        %td= planet.type_index
+        %td= planet.description
+        %td= planet.gm_notes
+        %td= planet.image_src
+        %td= planet.orbit_id
+        %td= link_to 'Show', planet
+        %td= link_to 'Edit', edit_planet_path(planet)
+        %td= link_to 'Destroy', planet, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Planet', new_planet_path

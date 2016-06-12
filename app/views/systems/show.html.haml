@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b X:
+  = @system.x
+%p
+  %b Y:
+  = @system.y
+%p
+  %b Name:
+  = @system.name
+%p
+  %b Star size:
+  = @system.star_size
+%p
+  %b Star temperature:
+  = @system.star_temperature
+%p
+  %b Description:
+  = @system.description
+%p
+  %b Gm notes:
+  = @system.gm_notes
+
+= link_to 'Edit', edit_system_path(@system)
+\|
+= link_to 'Back', systems_path

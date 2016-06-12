@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  xp: 1
+  name: MyString
+  planet_id: 1
+  force: 1
+  cunning: 1
+  wealth: 1
+  faccreds: 1
+  goal_id: 1
+  goal_progress: 1
+  goal_requirement: 1
+  user_id: 1
+
+two:
+  xp: 1
+  name: MyString
+  planet_id: 1
+  force: 1
+  cunning: 1
+  wealth: 1
+  faccreds: 1
+  goal_id: 1
+  goal_progress: 1
+  goal_requirement: 1
+  user_id: 1

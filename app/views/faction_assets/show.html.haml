@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Maintained:
+  = @faction_asset.maintained
+%p
+  %b Disabled:
+  = @faction_asset.disabled
+%p
+  %b Asset:
+  = @faction_asset.asset_id
+%p
+  %b Hp:
+  = @faction_asset.hp
+%p
+  %b Faction:
+  = @faction_asset.faction_id
+%p
+  %b Gm notes:
+  = @faction_asset.gm_notes
+%p
+  %b Notes:
+  = @faction_asset.notes
+
+= link_to 'Edit', edit_faction_asset_path(@faction_asset)
+\|
+= link_to 'Back', faction_assets_path

@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Distance:
+  = @orbit.distance
+%p
+  %b Period:
+  = @orbit.period
+%p
+  %b Angle:
+  = @orbit.angle
+%p
+  %b Index:
+  = @orbit.index
+
+= link_to 'Edit', edit_orbit_path(@orbit)
+\|
+= link_to 'Back', orbits_path

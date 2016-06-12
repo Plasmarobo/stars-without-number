@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Faction turn:
+  = @faction_action.faction_turn_id
+%p
+  %b Free:
+  = @faction_action.free
+%p
+  %b Action:
+  = @faction_action.action
+
+= link_to 'Edit', edit_faction_action_path(@faction_action)
+\|
+= link_to 'Back', faction_actions_path

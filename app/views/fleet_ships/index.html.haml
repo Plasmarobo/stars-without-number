@@ -1,0 +1,23 @@
+%h1 Listing fleet_ships
+
+%table
+  %thead
+    %tr
+      %th Ship
+      %th Fleet
+      %th
+      %th
+      %th
+
+  %tbody
+    - @fleet_ships.each do |fleet_ship|
+      %tr
+        %td= fleet_ship.ship_id
+        %td= fleet_ship.fleet_id
+        %td= link_to 'Show', fleet_ship
+        %td= link_to 'Edit', edit_fleet_ship_path(fleet_ship)
+        %td= link_to 'Destroy', fleet_ship, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Fleet ship', new_fleet_ship_path

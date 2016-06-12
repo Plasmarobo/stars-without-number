@@ -1,0 +1,27 @@
+%h1 Listing orbits
+
+%table
+  %thead
+    %tr
+      %th Distance
+      %th Period
+      %th Angle
+      %th Index
+      %th
+      %th
+      %th
+
+  %tbody
+    - @orbits.each do |orbit|
+      %tr
+        %td= orbit.distance
+        %td= orbit.period
+        %td= orbit.angle
+        %td= orbit.index
+        %td= link_to 'Show', orbit
+        %td= link_to 'Edit', edit_orbit_path(orbit)
+        %td= link_to 'Destroy', orbit, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Orbit', new_orbit_path

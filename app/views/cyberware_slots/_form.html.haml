@@ -1,0 +1,16 @@
+= form_for @cyberware_slot do |f|
+  - if @cyberware_slot.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@cyberware_slot.errors.count, "error")} prohibited this cyberware_slot from being saved:"
+      %ul
+        - @cyberware_slot.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :cyberware_id
+    = f.number_field :cyberware_id
+  .field
+    = f.label :character_id
+    = f.number_field :character_id
+  .actions
+    = f.submit 'Save'

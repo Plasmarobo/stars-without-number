@@ -1,0 +1,2 @@
+class MentalSaveProgression < ApplicationRecord
+end

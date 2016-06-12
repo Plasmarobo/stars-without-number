@@ -1,0 +1,37 @@
+%h1 Listing vehicles
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Cost
+      %th Speed
+      %th Armor
+      %th Max hp
+      %th Max crew
+      %th Tech level
+      %th Heavy armor
+      %th
+      %th
+      %th
+
+  %tbody
+    - @vehicles.each do |vehicle|
+      %tr
+        %td= vehicle.name
+        %td= vehicle.description
+        %td= vehicle.cost
+        %td= vehicle.speed
+        %td= vehicle.armor
+        %td= vehicle.max_hp
+        %td= vehicle.max_crew
+        %td= vehicle.tech_level
+        %td= vehicle.heavy_armor
+        %td= link_to 'Show', vehicle
+        %td= link_to 'Edit', edit_vehicle_path(vehicle)
+        %td= link_to 'Destroy', vehicle, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Vehicle', new_vehicle_path

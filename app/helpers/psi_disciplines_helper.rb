@@ -1,0 +1,2 @@
+module PsiDisciplinesHelper
+end

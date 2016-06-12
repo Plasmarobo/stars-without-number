@@ -1,0 +1,22 @@
+= form_for @armor_slot do |f|
+  - if @armor_slot.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@armor_slot.errors.count, "error")} prohibited this armor_slot from being saved:"
+      %ul
+        - @armor_slot.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :armor_id
+    = f.number_field :armor_id
+  .field
+    = f.label :character_id
+    = f.number_field :character_id
+  .field
+    = f.label :ammo_slot_id
+    = f.number_field :ammo_slot_id
+  .field
+    = f.label :item_id
+    = f.number_field :item_id
+  .actions
+    = f.submit 'Save'

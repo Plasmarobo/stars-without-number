@@ -1,0 +1,2 @@
+class CargoSlot < ApplicationRecord
+end

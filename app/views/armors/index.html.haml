@@ -1,0 +1,39 @@
+%h1 Listing armors
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Ac
+      %th Ac bonus
+      %th Damage reduction
+      %th Cost
+      %th Tech level
+      %th Encumberance
+      %th Ammo
+      %th Ammo efficiency
+      %th
+      %th
+      %th
+
+  %tbody
+    - @armors.each do |armor|
+      %tr
+        %td= armor.name
+        %td= armor.description
+        %td= armor.ac
+        %td= armor.ac_bonus
+        %td= armor.damage_reduction
+        %td= armor.cost
+        %td= armor.tech_level
+        %td= armor.encumberance
+        %td= armor.ammo_id
+        %td= armor.ammo_efficiency
+        %td= link_to 'Show', armor
+        %td= link_to 'Edit', edit_armor_path(armor)
+        %td= link_to 'Destroy', armor, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Armor', new_armor_path

@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Ship fitting:
+  = @ship_fitting_slot.ship_fitting_id
+%p
+  %b Ship:
+  = @ship_fitting_slot.ship_id
+
+= link_to 'Edit', edit_ship_fitting_slot_path(@ship_fitting_slot)
+\|
+= link_to 'Back', ship_fitting_slots_path

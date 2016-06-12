@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @cyberware.name
+%p
+  %b Description:
+  = @cyberware.description
+%p
+  %b Cost:
+  = @cyberware.cost
+%p
+  %b System strain:
+  = @cyberware.system_strain
+%p
+  %b Tech level:
+  = @cyberware.tech_level
+
+= link_to 'Edit', edit_cyberware_path(@cyberware)
+\|
+= link_to 'Back', cyberwares_path

@@ -1,0 +1,27 @@
+%h1 Listing armor_slots
+
+%table
+  %thead
+    %tr
+      %th Armor
+      %th Character
+      %th Ammo slot
+      %th Item
+      %th
+      %th
+      %th
+
+  %tbody
+    - @armor_slots.each do |armor_slot|
+      %tr
+        %td= armor_slot.armor_id
+        %td= armor_slot.character_id
+        %td= armor_slot.ammo_slot_id
+        %td= armor_slot.item_id
+        %td= link_to 'Show', armor_slot
+        %td= link_to 'Edit', edit_armor_slot_path(armor_slot)
+        %td= link_to 'Destroy', armor_slot, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Armor slot', new_armor_slot_path

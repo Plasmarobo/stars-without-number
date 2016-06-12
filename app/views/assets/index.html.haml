@@ -1,0 +1,43 @@
+%h1 Listing assets
+
+%table
+  %thead
+    %tr
+      %th Max hp
+      %th Asset type
+      %th Attribute type
+      %th Cost
+      %th Upkeep
+      %th Tech level
+      %th Asset level
+      %th Attack attribute
+      %th Defense attribute
+      %th Attack roll
+      %th Counter roll
+      %th Special
+      %th
+      %th
+      %th
+
+  %tbody
+    - @assets.each do |asset|
+      %tr
+        %td= asset.max_hp
+        %td= asset.asset_type
+        %td= asset.attribute_type
+        %td= asset.cost
+        %td= asset.upkeep
+        %td= asset.tech_level
+        %td= asset.asset_level
+        %td= asset.attack_attribute
+        %td= asset.defense_attribute
+        %td= asset.attack_roll
+        %td= asset.counter_roll
+        %td= asset.special
+        %td= link_to 'Show', asset
+        %td= link_to 'Edit', edit_asset_path(asset)
+        %td= link_to 'Destroy', asset, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Asset', new_asset_path

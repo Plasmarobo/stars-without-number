@@ -1,0 +1,23 @@
+%h1 Listing cyberware_slots
+
+%table
+  %thead
+    %tr
+      %th Cyberware
+      %th Character
+      %th
+      %th
+      %th
+
+  %tbody
+    - @cyberware_slots.each do |cyberware_slot|
+      %tr
+        %td= cyberware_slot.cyberware_id
+        %td= cyberware_slot.character_id
+        %td= link_to 'Show', cyberware_slot
+        %td= link_to 'Edit', edit_cyberware_slot_path(cyberware_slot)
+        %td= link_to 'Destroy', cyberware_slot, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Cyberware slot', new_cyberware_slot_path

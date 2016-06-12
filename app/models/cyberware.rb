@@ -1,0 +1,2 @@
+class Cyberware < ApplicationRecord
+end

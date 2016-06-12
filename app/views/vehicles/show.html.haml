@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @vehicle.name
+%p
+  %b Description:
+  = @vehicle.description
+%p
+  %b Cost:
+  = @vehicle.cost
+%p
+  %b Speed:
+  = @vehicle.speed
+%p
+  %b Armor:
+  = @vehicle.armor
+%p
+  %b Max hp:
+  = @vehicle.max_hp
+%p
+  %b Max crew:
+  = @vehicle.max_crew
+%p
+  %b Tech level:
+  = @vehicle.tech_level
+%p
+  %b Heavy armor:
+  = @vehicle.heavy_armor
+
+= link_to 'Edit', edit_vehicle_path(@vehicle)
+\|
+= link_to 'Back', vehicles_path

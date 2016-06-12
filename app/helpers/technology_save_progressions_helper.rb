@@ -1,0 +1,2 @@
+module TechnologySaveProgressionsHelper
+end

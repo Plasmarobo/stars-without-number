@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Character class:
+  = @luck_save_progression.character_class_id
+%p
+  %b Level:
+  = @luck_save_progression.level
+%p
+  %b Luck save:
+  = @luck_save_progression.luck_save
+
+= link_to 'Edit', edit_luck_save_progression_path(@luck_save_progression)
+\|
+= link_to 'Back', luck_save_progressions_path

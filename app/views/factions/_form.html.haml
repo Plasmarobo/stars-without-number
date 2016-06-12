@@ -1,0 +1,43 @@
+= form_for @faction do |f|
+  - if @faction.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@faction.errors.count, "error")} prohibited this faction from being saved:"
+      %ul
+        - @faction.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :xp
+    = f.number_field :xp
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :planet_id
+    = f.number_field :planet_id
+  .field
+    = f.label :force
+    = f.number_field :force
+  .field
+    = f.label :cunning
+    = f.number_field :cunning
+  .field
+    = f.label :wealth
+    = f.number_field :wealth
+  .field
+    = f.label :faccreds
+    = f.number_field :faccreds
+  .field
+    = f.label :goal_id
+    = f.number_field :goal_id
+  .field
+    = f.label :goal_progress
+    = f.number_field :goal_progress
+  .field
+    = f.label :goal_requirement
+    = f.number_field :goal_requirement
+  .field
+    = f.label :user_id
+    = f.number_field :user_id
+  .actions
+    = f.submit 'Save'

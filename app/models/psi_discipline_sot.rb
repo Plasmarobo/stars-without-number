@@ -1,0 +1,2 @@
+class PsiDisciplineSot < ApplicationRecord
+end

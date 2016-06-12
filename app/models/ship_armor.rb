@@ -1,0 +1,2 @@
+class ShipArmor < ApplicationRecord
+end

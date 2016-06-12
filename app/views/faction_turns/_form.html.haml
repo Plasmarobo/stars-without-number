@@ -1,0 +1,19 @@
+= form_for @faction_turn do |f|
+  - if @faction_turn.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@faction_turn.errors.count, "error")} prohibited this faction_turn from being saved:"
+      %ul
+        - @faction_turn.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :turn_number
+    = f.number_field :turn_number
+  .field
+    = f.label :game_id
+    = f.number_field :game_id
+  .field
+    = f.label :order
+    = f.number_field :order
+  .actions
+    = f.submit 'Save'

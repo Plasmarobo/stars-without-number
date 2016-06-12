@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Character class:
+  = @class_skill.character_class_id
+%p
+  %b Skill:
+  = @class_skill.skill_id
+
+= link_to 'Edit', edit_class_skill_path(@class_skill)
+\|
+= link_to 'Back', class_skills_path

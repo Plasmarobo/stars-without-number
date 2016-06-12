@@ -1,0 +1,25 @@
+%h1 Listing mental_save_progressions
+
+%table
+  %thead
+    %tr
+      %th Character class
+      %th Level
+      %th Mental save
+      %th
+      %th
+      %th
+
+  %tbody
+    - @mental_save_progressions.each do |mental_save_progression|
+      %tr
+        %td= mental_save_progression.character_class_id
+        %td= mental_save_progression.level
+        %td= mental_save_progression.mental_save
+        %td= link_to 'Show', mental_save_progression
+        %td= link_to 'Edit', edit_mental_save_progression_path(mental_save_progression)
+        %td= link_to 'Destroy', mental_save_progression, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Mental save progression', new_mental_save_progression_path

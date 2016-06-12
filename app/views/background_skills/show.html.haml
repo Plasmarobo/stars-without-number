@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Background:
+  = @background_skill.background_id
+%p
+  %b Skill:
+  = @background_skill.skill_id
+
+= link_to 'Edit', edit_background_skill_path(@background_skill)
+\|
+= link_to 'Back', background_skills_path

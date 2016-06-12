@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  x: 1
+  'y': 1
+  name: MyString
+  atmosphere: 1
+  temperature: 1
+  biosphere: 1
+  tech_level: 1
+  population: 1
+  type_index: 1
+  description: MyString
+  gm_notes: MyString
+  image_src: MyString
+  orbit_id: 1
+
+two:
+  x: 1
+  'y': 1
+  name: MyString
+  atmosphere: 1
+  temperature: 1
+  biosphere: 1
+  tech_level: 1
+  population: 1
+  type_index: 1
+  description: MyString
+  gm_notes: MyString
+  image_src: MyString
+  orbit_id: 1

@@ -1,0 +1,2 @@
+class TechnologySaveProgression < ApplicationRecord
+end

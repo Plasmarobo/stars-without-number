@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item_id: 1
+  name: MyString
+  description: MyString
+  cost: MyString
+  mass: MyString
+  count: MyString
+
+two:
+  item_id: 1
+  name: MyString
+  description: MyString
+  cost: MyString
+  mass: MyString
+  count: MyString

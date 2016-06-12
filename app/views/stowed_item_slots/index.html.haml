@@ -1,0 +1,23 @@
+%h1 Listing stowed_item_slots
+
+%table
+  %thead
+    %tr
+      %th Character
+      %th Item slot
+      %th
+      %th
+      %th
+
+  %tbody
+    - @stowed_item_slots.each do |stowed_item_slot|
+      %tr
+        %td= stowed_item_slot.character_id
+        %td= stowed_item_slot.item_slot_id
+        %td= link_to 'Show', stowed_item_slot
+        %td= link_to 'Edit', edit_stowed_item_slot_path(stowed_item_slot)
+        %td= link_to 'Destroy', stowed_item_slot, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Stowed item slot', new_stowed_item_slot_path

@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Ship:
+  = @fleet_ship.ship_id
+%p
+  %b Fleet:
+  = @fleet_ship.fleet_id
+
+= link_to 'Edit', edit_fleet_ship_path(@fleet_ship)
+\|
+= link_to 'Back', fleet_ships_path

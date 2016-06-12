@@ -1,0 +1,23 @@
+%h1 Listing faction_tags
+
+%table
+  %thead
+    %tr
+      %th Faction
+      %th Tag
+      %th
+      %th
+      %th
+
+  %tbody
+    - @faction_tags.each do |faction_tag|
+      %tr
+        %td= faction_tag.faction_id
+        %td= faction_tag.tag_id
+        %td= link_to 'Show', faction_tag
+        %td= link_to 'Edit', edit_faction_tag_path(faction_tag)
+        %td= link_to 'Destroy', faction_tag, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Faction tag', new_faction_tag_path

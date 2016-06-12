@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Character class:
+  = @physical_save_progression.character_class_id
+%p
+  %b Level:
+  = @physical_save_progression.level
+%p
+  %b Physical save:
+  = @physical_save_progression.physical_save
+
+= link_to 'Edit', edit_physical_save_progression_path(@physical_save_progression)
+\|
+= link_to 'Back', physical_save_progressions_path

@@ -1,0 +1,2 @@
+class SkillSlot < ApplicationRecord
+end

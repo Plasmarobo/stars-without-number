@@ -1,0 +1,2 @@
+class LevelProgression < ApplicationRecord
+end

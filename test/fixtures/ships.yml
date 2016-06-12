@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hp: 1
+  free_power: 1
+  free_mass: 1
+  ship_hull_id: 1
+
+two:
+  hp: 1
+  free_power: 1
+  free_mass: 1
+  ship_hull_id: 1

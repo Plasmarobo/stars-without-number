@@ -1,0 +1,40 @@
+= form_for @ship_fitting do |f|
+  - if @ship_fitting.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@ship_fitting.errors.count, "error")} prohibited this ship_fitting from being saved:"
+      %ul
+        - @ship_fitting.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :description
+    = f.text_field :description
+  .field
+    = f.label :cost
+    = f.number_field :cost
+  .field
+    = f.label :power
+    = f.number_field :power
+  .field
+    = f.label :mass
+    = f.number_field :mass
+  .field
+    = f.label :min_hull_class
+    = f.number_field :min_hull_class
+  .field
+    = f.label :max_hull_class
+    = f.number_field :max_hull_class
+  .field
+    = f.label :tech_level
+    = f.number_field :tech_level
+  .field
+    = f.label :notes
+    = f.text_field :notes
+  .field
+    = f.label :gm_notes
+    = f.text_field :gm_notes
+  .actions
+    = f.submit 'Save'

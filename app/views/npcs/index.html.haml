@@ -1,0 +1,41 @@
+%h1 Listing npcs
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Character
+      %th Faction
+      %th Planet
+      %th Location
+      %th Satellite
+      %th Poi
+      %th Ship
+      %th Notes
+      %th Gm notes
+      %th Description
+      %th
+      %th
+      %th
+
+  %tbody
+    - @npcs.each do |npc|
+      %tr
+        %td= npc.name
+        %td= npc.character_id
+        %td= npc.faction_id
+        %td= npc.planet_id
+        %td= npc.location_id
+        %td= npc.satellite_id
+        %td= npc.poi_id
+        %td= npc.ship_id
+        %td= npc.notes
+        %td= npc.gm_notes
+        %td= npc.description
+        %td= link_to 'Show', npc
+        %td= link_to 'Edit', edit_npc_path(npc)
+        %td= link_to 'Destroy', npc, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Npc', new_npc_path

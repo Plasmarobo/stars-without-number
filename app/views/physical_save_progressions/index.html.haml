@@ -1,0 +1,25 @@
+%h1 Listing physical_save_progressions
+
+%table
+  %thead
+    %tr
+      %th Character class
+      %th Level
+      %th Physical save
+      %th
+      %th
+      %th
+
+  %tbody
+    - @physical_save_progressions.each do |physical_save_progression|
+      %tr
+        %td= physical_save_progression.character_class_id
+        %td= physical_save_progression.level
+        %td= physical_save_progression.physical_save
+        %td= link_to 'Show', physical_save_progression
+        %td= link_to 'Edit', edit_physical_save_progression_path(physical_save_progression)
+        %td= link_to 'Destroy', physical_save_progression, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Physical save progression', new_physical_save_progression_path

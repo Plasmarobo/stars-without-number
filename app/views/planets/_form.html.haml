@@ -1,0 +1,49 @@
+= form_for @planet do |f|
+  - if @planet.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@planet.errors.count, "error")} prohibited this planet from being saved:"
+      %ul
+        - @planet.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :x
+    = f.number_field :x
+  .field
+    = f.label :y
+    = f.number_field :y
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :atmosphere
+    = f.number_field :atmosphere
+  .field
+    = f.label :temperature
+    = f.number_field :temperature
+  .field
+    = f.label :biosphere
+    = f.number_field :biosphere
+  .field
+    = f.label :tech_level
+    = f.number_field :tech_level
+  .field
+    = f.label :population
+    = f.number_field :population
+  .field
+    = f.label :type_index
+    = f.number_field :type_index
+  .field
+    = f.label :description
+    = f.text_field :description
+  .field
+    = f.label :gm_notes
+    = f.text_field :gm_notes
+  .field
+    = f.label :image_src
+    = f.text_field :image_src
+  .field
+    = f.label :orbit_id
+    = f.number_field :orbit_id
+  .actions
+    = f.submit 'Save'

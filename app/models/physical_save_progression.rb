@@ -1,0 +1,2 @@
+class PhysicalSaveProgression < ApplicationRecord
+end

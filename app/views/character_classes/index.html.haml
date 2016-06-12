@@ -1,0 +1,25 @@
+%h1 Listing character_classes
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Gm notes
+      %th
+      %th
+      %th
+
+  %tbody
+    - @character_classes.each do |character_class|
+      %tr
+        %td= character_class.name
+        %td= character_class.description
+        %td= character_class.gm_notes
+        %td= link_to 'Show', character_class
+        %td= link_to 'Edit', edit_character_class_path(character_class)
+        %td= link_to 'Destroy', character_class, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Character class', new_character_class_path

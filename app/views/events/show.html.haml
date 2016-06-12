@@ -1,0 +1,42 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @event.title
+%p
+  %b Body:
+  = @event.body
+%p
+  %b X:
+  = @event.x
+%p
+  %b Y:
+  = @event.y
+%p
+  %b Planet:
+  = @event.planet_id
+%p
+  %b System:
+  = @event.system_id
+%p
+  %b Faction:
+  = @event.faction_id
+%p
+  %b Player:
+  = @event.player_id
+%p
+  %b Npc:
+  = @event.npc_id
+%p
+  %b Ship:
+  = @event.ship_id
+%p
+  %b Fleet:
+  = @event.fleet_id
+%p
+  %b Tags:
+  = @event.tags
+
+= link_to 'Edit', edit_event_path(@event)
+\|
+= link_to 'Back', events_path

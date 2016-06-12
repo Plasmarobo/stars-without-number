@@ -1,0 +1,48 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @ship_armor.name
+%p
+  %b Description:
+  = @ship_armor.description
+%p
+  %b Cost:
+  = @ship_armor.cost
+%p
+  %b Power:
+  = @ship_armor.power
+%p
+  %b Mass:
+  = @ship_armor.mass
+%p
+  %b Min hull class:
+  = @ship_armor.min_hull_class
+%p
+  %b Tech level:
+  = @ship_armor.tech_level
+%p
+  %b Ac bonus:
+  = @ship_armor.ac_bonus
+%p
+  %b Ac:
+  = @ship_armor.ac
+%p
+  %b Speed penalty:
+  = @ship_armor.speed_penalty
+%p
+  %b Ap reduction:
+  = @ship_armor.ap_reduction
+%p
+  %b Evasion chance:
+  = @ship_armor.evasion_chance
+%p
+  %b Phase reduction:
+  = @ship_armor.phase_reduction
+%p
+  %b Bonus hp:
+  = @ship_armor.bonus_hp
+
+= link_to 'Edit', edit_ship_armor_path(@ship_armor)
+\|
+= link_to 'Back', ship_armors_path

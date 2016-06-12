@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  maintained: false
+  disabled: false
+  asset_id: 1
+  hp: 1
+  faction_id: 1
+  gm_notes: MyString
+  notes: MyString
+
+two:
+  maintained: false
+  disabled: false
+  asset_id: 1
+  hp: 1
+  faction_id: 1
+  gm_notes: MyString
+  notes: MyString

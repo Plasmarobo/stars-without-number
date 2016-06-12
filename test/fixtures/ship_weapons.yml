@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  cost: 1
+  damage: MyString
+  power: 1
+  mass: 1
+  hardpoint_use: 1
+  min_hull_class: 1
+  tech_level: 1
+  ap: 1
+  clumsy: false
+  ammo_id: 1
+  phase_rating: 1
+  cloud: false
+
+two:
+  name: MyString
+  description: MyString
+  cost: 1
+  damage: MyString
+  power: 1
+  mass: 1
+  hardpoint_use: 1
+  min_hull_class: 1
+  tech_level: 1
+  ap: 1
+  clumsy: false
+  ammo_id: 1
+  phase_rating: 1
+  cloud: false

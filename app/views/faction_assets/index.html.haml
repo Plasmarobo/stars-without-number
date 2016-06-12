@@ -1,0 +1,33 @@
+%h1 Listing faction_assets
+
+%table
+  %thead
+    %tr
+      %th Maintained
+      %th Disabled
+      %th Asset
+      %th Hp
+      %th Faction
+      %th Gm notes
+      %th Notes
+      %th
+      %th
+      %th
+
+  %tbody
+    - @faction_assets.each do |faction_asset|
+      %tr
+        %td= faction_asset.maintained
+        %td= faction_asset.disabled
+        %td= faction_asset.asset_id
+        %td= faction_asset.hp
+        %td= faction_asset.faction_id
+        %td= faction_asset.gm_notes
+        %td= faction_asset.notes
+        %td= link_to 'Show', faction_asset
+        %td= link_to 'Edit', edit_faction_asset_path(faction_asset)
+        %td= link_to 'Destroy', faction_asset, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Faction asset', new_faction_asset_path

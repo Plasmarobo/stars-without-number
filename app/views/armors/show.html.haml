@@ -1,0 +1,36 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @armor.name
+%p
+  %b Description:
+  = @armor.description
+%p
+  %b Ac:
+  = @armor.ac
+%p
+  %b Ac bonus:
+  = @armor.ac_bonus
+%p
+  %b Damage reduction:
+  = @armor.damage_reduction
+%p
+  %b Cost:
+  = @armor.cost
+%p
+  %b Tech level:
+  = @armor.tech_level
+%p
+  %b Encumberance:
+  = @armor.encumberance
+%p
+  %b Ammo:
+  = @armor.ammo_id
+%p
+  %b Ammo efficiency:
+  = @armor.ammo_efficiency
+
+= link_to 'Edit', edit_armor_path(@armor)
+\|
+= link_to 'Back', armors_path

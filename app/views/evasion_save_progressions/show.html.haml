@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Character class:
+  = @evasion_save_progression.character_class_id
+%p
+  %b Level:
+  = @evasion_save_progression.level
+%p
+  %b Evasion save:
+  = @evasion_save_progression.evasion_save
+
+= link_to 'Edit', edit_evasion_save_progression_path(@evasion_save_progression)
+\|
+= link_to 'Back', evasion_save_progressions_path

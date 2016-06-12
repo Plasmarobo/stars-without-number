@@ -1,0 +1,29 @@
+%h1 Listing skill_slots
+
+%table
+  %thead
+    %tr
+      %th Character
+      %th Background
+      %th Training
+      %th Skill
+      %th Rank
+      %th
+      %th
+      %th
+
+  %tbody
+    - @skill_slots.each do |skill_slot|
+      %tr
+        %td= skill_slot.character_id
+        %td= skill_slot.background_id
+        %td= skill_slot.training_id
+        %td= skill_slot.skill_id
+        %td= skill_slot.rank
+        %td= link_to 'Show', skill_slot
+        %td= link_to 'Edit', edit_skill_slot_path(skill_slot)
+        %td= link_to 'Destroy', skill_slot, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Skill slot', new_skill_slot_path

@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Ship:
+  = @cargo_slot.ship_id
+%p
+  %b Cargo:
+  = @cargo_slot.cargo_id
+%p
+  %b Count:
+  = @cargo_slot.count
+%p
+  %b Notes:
+  = @cargo_slot.notes
+%p
+  %b Gm notes:
+  = @cargo_slot.gm_notes
+
+= link_to 'Edit', edit_cargo_slot_path(@cargo_slot)
+\|
+= link_to 'Back', cargo_slots_path

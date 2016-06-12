@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  attacker_id: 1
+  defender_id: 1
+  attack_roll: MyString
+  defense_roll: MyString
+  attack: 1
+  defense: 1
+  counter: false
+
+two:
+  attacker_id: 1
+  defender_id: 1
+  attack_roll: MyString
+  defense_roll: MyString
+  attack: 1
+  defense: 1
+  counter: false

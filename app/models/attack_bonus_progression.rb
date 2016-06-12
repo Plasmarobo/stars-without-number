@@ -1,0 +1,2 @@
+class AttackBonusProgression < ApplicationRecord
+end

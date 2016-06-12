@@ -1,0 +1,25 @@
+= form_for @skill_slot do |f|
+  - if @skill_slot.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@skill_slot.errors.count, "error")} prohibited this skill_slot from being saved:"
+      %ul
+        - @skill_slot.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :character_id
+    = f.number_field :character_id
+  .field
+    = f.label :background_id
+    = f.number_field :background_id
+  .field
+    = f.label :training_id
+    = f.text_field :training_id
+  .field
+    = f.label :skill_id
+    = f.number_field :skill_id
+  .field
+    = f.label :rank
+    = f.number_field :rank
+  .actions
+    = f.submit 'Save'

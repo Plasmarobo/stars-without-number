@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Ship armor:
+  = @ship_armor_slot.ship_armor_id
+%p
+  %b Ship:
+  = @ship_armor_slot.ship_id
+
+= link_to 'Edit', edit_ship_armor_slot_path(@ship_armor_slot)
+\|
+= link_to 'Back', ship_armor_slots_path

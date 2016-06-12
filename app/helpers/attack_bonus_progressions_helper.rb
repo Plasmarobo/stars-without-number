@@ -1,0 +1,2 @@
+module AttackBonusProgressionsHelper
+end

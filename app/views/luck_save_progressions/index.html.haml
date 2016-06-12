@@ -1,0 +1,25 @@
+%h1 Listing luck_save_progressions
+
+%table
+  %thead
+    %tr
+      %th Character class
+      %th Level
+      %th Luck save
+      %th
+      %th
+      %th
+
+  %tbody
+    - @luck_save_progressions.each do |luck_save_progression|
+      %tr
+        %td= luck_save_progression.character_class_id
+        %td= luck_save_progression.level
+        %td= luck_save_progression.luck_save
+        %td= link_to 'Show', luck_save_progression
+        %td= link_to 'Edit', edit_luck_save_progression_path(luck_save_progression)
+        %td= link_to 'Destroy', luck_save_progression, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Luck save progression', new_luck_save_progression_path

@@ -1,0 +1,33 @@
+%h1 Listing faction_attacks
+
+%table
+  %thead
+    %tr
+      %th Attacker
+      %th Defender
+      %th Attack roll
+      %th Defense roll
+      %th Attack
+      %th Defense
+      %th Counter
+      %th
+      %th
+      %th
+
+  %tbody
+    - @faction_attacks.each do |faction_attack|
+      %tr
+        %td= faction_attack.attacker_id
+        %td= faction_attack.defender_id
+        %td= faction_attack.attack_roll
+        %td= faction_attack.defense_roll
+        %td= faction_attack.attack
+        %td= faction_attack.defense
+        %td= faction_attack.counter
+        %td= link_to 'Show', faction_attack
+        %td= link_to 'Edit', edit_faction_attack_path(faction_attack)
+        %td= link_to 'Destroy', faction_attack, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Faction attack', new_faction_attack_path

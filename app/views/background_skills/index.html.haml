@@ -1,0 +1,23 @@
+%h1 Listing background_skills
+
+%table
+  %thead
+    %tr
+      %th Background
+      %th Skill
+      %th
+      %th
+      %th
+
+  %tbody
+    - @background_skills.each do |background_skill|
+      %tr
+        %td= background_skill.background_id
+        %td= background_skill.skill_id
+        %td= link_to 'Show', background_skill
+        %td= link_to 'Edit', edit_background_skill_path(background_skill)
+        %td= link_to 'Destroy', background_skill, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Background skill', new_background_skill_path

@@ -1,0 +1,29 @@
+%h1 Listing cyberwares
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Cost
+      %th System strain
+      %th Tech level
+      %th
+      %th
+      %th
+
+  %tbody
+    - @cyberwares.each do |cyberware|
+      %tr
+        %td= cyberware.name
+        %td= cyberware.description
+        %td= cyberware.cost
+        %td= cyberware.system_strain
+        %td= cyberware.tech_level
+        %td= link_to 'Show', cyberware
+        %td= link_to 'Edit', edit_cyberware_path(cyberware)
+        %td= link_to 'Destroy', cyberware, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Cyberware', new_cyberware_path

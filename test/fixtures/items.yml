@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  cost: 1
+  encumberance: 1
+  tech_level: 1
+  uses: 1
+  gm_notes: MyString
+
+two:
+  name: MyString
+  description: MyString
+  cost: 1
+  encumberance: 1
+  tech_level: 1
+  uses: 1
+  gm_notes: MyString

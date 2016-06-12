@@ -1,0 +1,29 @@
+%h1 Listing pois
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Orbit
+      %th Gm notes
+      %th Image src
+      %th
+      %th
+      %th
+
+  %tbody
+    - @pois.each do |poi|
+      %tr
+        %td= poi.name
+        %td= poi.description
+        %td= poi.orbit_id
+        %td= poi.gm_notes
+        %td= poi.image_src
+        %td= link_to 'Show', poi
+        %td= link_to 'Edit', edit_poi_path(poi)
+        %td= link_to 'Destroy', poi, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Poi', new_poi_path

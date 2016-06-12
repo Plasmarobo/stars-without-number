@@ -1,0 +1,25 @@
+%h1 Listing evasion_save_progressions
+
+%table
+  %thead
+    %tr
+      %th Character class
+      %th Level
+      %th Evasion save
+      %th
+      %th
+      %th
+
+  %tbody
+    - @evasion_save_progressions.each do |evasion_save_progression|
+      %tr
+        %td= evasion_save_progression.character_class_id
+        %td= evasion_save_progression.level
+        %td= evasion_save_progression.evasion_save
+        %td= link_to 'Show', evasion_save_progression
+        %td= link_to 'Edit', edit_evasion_save_progression_path(evasion_save_progression)
+        %td= link_to 'Destroy', evasion_save_progression, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Evasion save progression', new_evasion_save_progression_path

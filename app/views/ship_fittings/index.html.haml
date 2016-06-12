@@ -1,0 +1,39 @@
+%h1 Listing ship_fittings
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Cost
+      %th Power
+      %th Mass
+      %th Min hull class
+      %th Max hull class
+      %th Tech level
+      %th Notes
+      %th Gm notes
+      %th
+      %th
+      %th
+
+  %tbody
+    - @ship_fittings.each do |ship_fitting|
+      %tr
+        %td= ship_fitting.name
+        %td= ship_fitting.description
+        %td= ship_fitting.cost
+        %td= ship_fitting.power
+        %td= ship_fitting.mass
+        %td= ship_fitting.min_hull_class
+        %td= ship_fitting.max_hull_class
+        %td= ship_fitting.tech_level
+        %td= ship_fitting.notes
+        %td= ship_fitting.gm_notes
+        %td= link_to 'Show', ship_fitting
+        %td= link_to 'Edit', edit_ship_fitting_path(ship_fitting)
+        %td= link_to 'Destroy', ship_fitting, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Ship fitting', new_ship_fitting_path

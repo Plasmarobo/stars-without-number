@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Planet:
+  = @location.planet_id
+%p
+  %b Satellite:
+  = @location.satellite_id
+%p
+  %b Poi:
+  = @location.poi_id
+%p
+  %b Name:
+  = @location.name
+%p
+  %b Description:
+  = @location.description
+%p
+  %b Gm notes:
+  = @location.gm_notes
+
+= link_to 'Edit', edit_location_path(@location)
+\|
+= link_to 'Back', locations_path

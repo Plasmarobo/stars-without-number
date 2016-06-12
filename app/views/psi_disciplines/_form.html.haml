@@ -1,0 +1,31 @@
+= form_for @psi_discipline do |f|
+  - if @psi_discipline.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@psi_discipline.errors.count, "error")} prohibited this psi_discipline from being saved:"
+      %ul
+        - @psi_discipline.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :description
+    = f.text_field :description
+  .field
+    = f.label :cost
+    = f.number_field :cost
+  .field
+    = f.label :system_strain
+    = f.number_field :system_strain
+  .field
+    = f.label :attack
+    = f.text_field :attack
+  .field
+    = f.label :defense
+    = f.text_field :defense
+  .field
+    = f.label :level
+    = f.number_field :level
+  .actions
+    = f.submit 'Save'

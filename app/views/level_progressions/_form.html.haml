@@ -1,0 +1,19 @@
+= form_for @level_progression do |f|
+  - if @level_progression.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@level_progression.errors.count, "error")} prohibited this level_progression from being saved:"
+      %ul
+        - @level_progression.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :character_class_id
+    = f.number_field :character_class_id
+  .field
+    = f.label :level
+    = f.number_field :level
+  .field
+    = f.label :xp_requirement
+    = f.number_field :xp_requirement
+  .actions
+    = f.submit 'Save'

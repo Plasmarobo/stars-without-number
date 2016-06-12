@@ -1,0 +1,2 @@
+module FactionActionsHelper
+end

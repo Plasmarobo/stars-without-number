@@ -1,0 +1,2 @@
+class VehicleSlot < ApplicationRecord
+end

@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  attack_attribute: MyString
+  damage: MyString
+  cost: 1
+  range: 1
+  ammo_efficiency: 1
+  ammo_id: 1
+  long_reload: false
+  tech_level: 1
+  psitech: false
+  encumberance: 1
+  heavy_weapon: false
+
+two:
+  name: MyString
+  description: MyString
+  attack_attribute: MyString
+  damage: MyString
+  cost: 1
+  range: 1
+  ammo_efficiency: 1
+  ammo_id: 1
+  long_reload: false
+  tech_level: 1
+  psitech: false
+  encumberance: 1
+  heavy_weapon: false

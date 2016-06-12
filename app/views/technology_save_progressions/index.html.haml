@@ -1,0 +1,25 @@
+%h1 Listing technology_save_progressions
+
+%table
+  %thead
+    %tr
+      %th Character class
+      %th Level
+      %th Technology save
+      %th
+      %th
+      %th
+
+  %tbody
+    - @technology_save_progressions.each do |technology_save_progression|
+      %tr
+        %td= technology_save_progression.character_class_id
+        %td= technology_save_progression.level
+        %td= technology_save_progression.technology_save
+        %td= link_to 'Show', technology_save_progression
+        %td= link_to 'Edit', edit_technology_save_progression_path(technology_save_progression)
+        %td= link_to 'Destroy', technology_save_progression, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Technology save progression', new_technology_save_progression_path

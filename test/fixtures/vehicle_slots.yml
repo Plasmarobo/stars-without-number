@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vehicle_id: 1
+  hp: 1
+  character_id: 1
+  ship_id: 1
+
+two:
+  vehicle_id: 1
+  hp: 1
+  character_id: 1
+  ship_id: 1

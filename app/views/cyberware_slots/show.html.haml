@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Cyberware:
+  = @cyberware_slot.cyberware_id
+%p
+  %b Character:
+  = @cyberware_slot.character_id
+
+= link_to 'Edit', edit_cyberware_slot_path(@cyberware_slot)
+\|
+= link_to 'Back', cyberware_slots_path

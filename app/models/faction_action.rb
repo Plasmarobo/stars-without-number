@@ -1,0 +1,2 @@
+class FactionAction < ApplicationRecord
+end

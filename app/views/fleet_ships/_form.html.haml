@@ -1,0 +1,16 @@
+= form_for @fleet_ship do |f|
+  - if @fleet_ship.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@fleet_ship.errors.count, "error")} prohibited this fleet_ship from being saved:"
+      %ul
+        - @fleet_ship.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :ship_id
+    = f.number_field :ship_id
+  .field
+    = f.label :fleet_id
+    = f.number_field :fleet_id
+  .actions
+    = f.submit 'Save'

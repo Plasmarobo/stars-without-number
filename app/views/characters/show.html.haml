@@ -1,0 +1,72 @@
+%p#notice= notice
+
+%p
+  %b Charater class:
+  = @character.charater_class_id
+%p
+  %b Level:
+  = @character.level
+%p
+  %b Hp:
+  = @character.hp
+%p
+  %b Max hp:
+  = @character.max_hp
+%p
+  %b Pp:
+  = @character.pp
+%p
+  %b Max pp:
+  = @character.max_pp
+%p
+  %b Xp:
+  = @character.xp
+%p
+  %b Skill points:
+  = @character.skill_points
+%p
+  %b Strength:
+  = @character.strength
+%p
+  %b Dexterity:
+  = @character.dexterity
+%p
+  %b Constitution:
+  = @character.constitution
+%p
+  %b Intelligence:
+  = @character.intelligence
+%p
+  %b Wisdom:
+  = @character.wisdom
+%p
+  %b Charisma:
+  = @character.charisma
+%p
+  %b Notes:
+  = @character.notes
+%p
+  %b Gm notes:
+  = @character.gm_notes
+%p
+  %b Player:
+  = @character.player_id
+%p
+  %b Homeworld:
+  = @character.homeworld_id
+%p
+  %b Background:
+  = @character.background_id
+%p
+  %b Training:
+  = @character.training_id
+%p
+  %b Credits:
+  = @character.credits
+%p
+  %b System strain:
+  = @character.system_strain
+
+= link_to 'Edit', edit_character_path(@character)
+\|
+= link_to 'Back', characters_path

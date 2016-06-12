@@ -1,0 +1,2 @@
+class FleetShip < ApplicationRecord
+end

@@ -1,0 +1,49 @@
+= form_for @weapon do |f|
+  - if @weapon.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@weapon.errors.count, "error")} prohibited this weapon from being saved:"
+      %ul
+        - @weapon.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :description
+    = f.text_field :description
+  .field
+    = f.label :attack_attribute
+    = f.text_field :attack_attribute
+  .field
+    = f.label :damage
+    = f.text_field :damage
+  .field
+    = f.label :cost
+    = f.number_field :cost
+  .field
+    = f.label :range
+    = f.number_field :range
+  .field
+    = f.label :ammo_efficiency
+    = f.number_field :ammo_efficiency
+  .field
+    = f.label :ammo_id
+    = f.number_field :ammo_id
+  .field
+    = f.label :long_reload
+    = f.check_box :long_reload
+  .field
+    = f.label :tech_level
+    = f.number_field :tech_level
+  .field
+    = f.label :psitech
+    = f.check_box :psitech
+  .field
+    = f.label :encumberance
+    = f.number_field :encumberance
+  .field
+    = f.label :heavy_weapon
+    = f.check_box :heavy_weapon
+  .actions
+    = f.submit 'Save'

@@ -1,0 +1,25 @@
+= form_for @cyberware do |f|
+  - if @cyberware.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@cyberware.errors.count, "error")} prohibited this cyberware from being saved:"
+      %ul
+        - @cyberware.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :description
+    = f.text_field :description
+  .field
+    = f.label :cost
+    = f.text_field :cost
+  .field
+    = f.label :system_strain
+    = f.number_field :system_strain
+  .field
+    = f.label :tech_level
+    = f.number_field :tech_level
+  .actions
+    = f.submit 'Save'

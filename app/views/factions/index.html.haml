@@ -1,0 +1,41 @@
+%h1 Listing factions
+
+%table
+  %thead
+    %tr
+      %th Xp
+      %th Name
+      %th Planet
+      %th Force
+      %th Cunning
+      %th Wealth
+      %th Faccreds
+      %th Goal
+      %th Goal progress
+      %th Goal requirement
+      %th User
+      %th
+      %th
+      %th
+
+  %tbody
+    - @factions.each do |faction|
+      %tr
+        %td= faction.xp
+        %td= faction.name
+        %td= faction.planet_id
+        %td= faction.force
+        %td= faction.cunning
+        %td= faction.wealth
+        %td= faction.faccreds
+        %td= faction.goal_id
+        %td= faction.goal_progress
+        %td= faction.goal_requirement
+        %td= faction.user_id
+        %td= link_to 'Show', faction
+        %td= link_to 'Edit', edit_faction_path(faction)
+        %td= link_to 'Destroy', faction, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Faction', new_faction_path

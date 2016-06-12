@@ -1,0 +1,39 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @npc.name
+%p
+  %b Character:
+  = @npc.character_id
+%p
+  %b Faction:
+  = @npc.faction_id
+%p
+  %b Planet:
+  = @npc.planet_id
+%p
+  %b Location:
+  = @npc.location_id
+%p
+  %b Satellite:
+  = @npc.satellite_id
+%p
+  %b Poi:
+  = @npc.poi_id
+%p
+  %b Ship:
+  = @npc.ship_id
+%p
+  %b Notes:
+  = @npc.notes
+%p
+  %b Gm notes:
+  = @npc.gm_notes
+%p
+  %b Description:
+  = @npc.description
+
+= link_to 'Edit', edit_npc_path(@npc)
+\|
+= link_to 'Back', npcs_path

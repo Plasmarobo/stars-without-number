@@ -1,0 +1,29 @@
+%h1 Listing fleets
+
+%table
+  %thead
+    %tr
+      %th System
+      %th Planet
+      %th Poi
+      %th Faction
+      %th Speed
+      %th
+      %th
+      %th
+
+  %tbody
+    - @fleets.each do |fleet|
+      %tr
+        %td= fleet.system_id
+        %td= fleet.planet_id
+        %td= fleet.poi_id
+        %td= fleet.faction_id
+        %td= fleet.speed
+        %td= link_to 'Show', fleet
+        %td= link_to 'Edit', edit_fleet_path(fleet)
+        %td= link_to 'Destroy', fleet, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Fleet', new_fleet_path

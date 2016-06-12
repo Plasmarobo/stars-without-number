@@ -1,0 +1,23 @@
+%h1 Listing ship_fitting_slots
+
+%table
+  %thead
+    %tr
+      %th Ship fitting
+      %th Ship
+      %th
+      %th
+      %th
+
+  %tbody
+    - @ship_fitting_slots.each do |ship_fitting_slot|
+      %tr
+        %td= ship_fitting_slot.ship_fitting_id
+        %td= ship_fitting_slot.ship_id
+        %td= link_to 'Show', ship_fitting_slot
+        %td= link_to 'Edit', edit_ship_fitting_slot_path(ship_fitting_slot)
+        %td= link_to 'Destroy', ship_fitting_slot, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Ship fitting slot', new_ship_fitting_slot_path

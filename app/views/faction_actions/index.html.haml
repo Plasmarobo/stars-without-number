@@ -1,0 +1,25 @@
+%h1 Listing faction_actions
+
+%table
+  %thead
+    %tr
+      %th Faction turn
+      %th Free
+      %th Action
+      %th
+      %th
+      %th
+
+  %tbody
+    - @faction_actions.each do |faction_action|
+      %tr
+        %td= faction_action.faction_turn_id
+        %td= faction_action.free
+        %td= faction_action.action
+        %td= link_to 'Show', faction_action
+        %td= link_to 'Edit', edit_faction_action_path(faction_action)
+        %td= link_to 'Destroy', faction_action, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Faction action', new_faction_action_path

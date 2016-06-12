@@ -1,0 +1,25 @@
+%h1 Listing level_progressions
+
+%table
+  %thead
+    %tr
+      %th Character class
+      %th Level
+      %th Xp requirement
+      %th
+      %th
+      %th
+
+  %tbody
+    - @level_progressions.each do |level_progression|
+      %tr
+        %td= level_progression.character_class_id
+        %td= level_progression.level
+        %td= level_progression.xp_requirement
+        %td= link_to 'Show', level_progression
+        %td= link_to 'Edit', edit_level_progression_path(level_progression)
+        %td= link_to 'Destroy', level_progression, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Level progression', new_level_progression_path

@@ -1,0 +1,2 @@
+class FactionTag < ApplicationRecord
+end

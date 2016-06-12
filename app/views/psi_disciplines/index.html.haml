@@ -1,0 +1,33 @@
+%h1 Listing psi_disciplines
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Cost
+      %th System strain
+      %th Attack
+      %th Defense
+      %th Level
+      %th
+      %th
+      %th
+
+  %tbody
+    - @psi_disciplines.each do |psi_discipline|
+      %tr
+        %td= psi_discipline.name
+        %td= psi_discipline.description
+        %td= psi_discipline.cost
+        %td= psi_discipline.system_strain
+        %td= psi_discipline.attack
+        %td= psi_discipline.defense
+        %td= psi_discipline.level
+        %td= link_to 'Show', psi_discipline
+        %td= link_to 'Edit', edit_psi_discipline_path(psi_discipline)
+        %td= link_to 'Destroy', psi_discipline, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Psi discipline', new_psi_discipline_path

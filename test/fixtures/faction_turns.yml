@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  turn_number: 1
+  game_id: 1
+  order: 1
+
+two:
+  turn_number: 1
+  game_id: 1
+  order: 1

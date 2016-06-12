@@ -1,0 +1,45 @@
+%p#notice= notice
+
+%p
+  %b X:
+  = @planet.x
+%p
+  %b Y:
+  = @planet.y
+%p
+  %b Name:
+  = @planet.name
+%p
+  %b Atmosphere:
+  = @planet.atmosphere
+%p
+  %b Temperature:
+  = @planet.temperature
+%p
+  %b Biosphere:
+  = @planet.biosphere
+%p
+  %b Tech level:
+  = @planet.tech_level
+%p
+  %b Population:
+  = @planet.population
+%p
+  %b Type index:
+  = @planet.type_index
+%p
+  %b Description:
+  = @planet.description
+%p
+  %b Gm notes:
+  = @planet.gm_notes
+%p
+  %b Image src:
+  = @planet.image_src
+%p
+  %b Orbit:
+  = @planet.orbit_id
+
+= link_to 'Edit', edit_planet_path(@planet)
+\|
+= link_to 'Back', planets_path

@@ -1,0 +1,2 @@
+class EvasionSaveProgression < ApplicationRecord
+end

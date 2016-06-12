@@ -1,0 +1,2 @@
+class ShipFitting < ApplicationRecord
+end

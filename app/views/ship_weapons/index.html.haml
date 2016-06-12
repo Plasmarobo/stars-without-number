@@ -1,0 +1,47 @@
+%h1 Listing ship_weapons
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Cost
+      %th Damage
+      %th Power
+      %th Mass
+      %th Hardpoint use
+      %th Min hull class
+      %th Tech level
+      %th Ap
+      %th Clumsy
+      %th Ammo
+      %th Phase rating
+      %th Cloud
+      %th
+      %th
+      %th
+
+  %tbody
+    - @ship_weapons.each do |ship_weapon|
+      %tr
+        %td= ship_weapon.name
+        %td= ship_weapon.description
+        %td= ship_weapon.cost
+        %td= ship_weapon.damage
+        %td= ship_weapon.power
+        %td= ship_weapon.mass
+        %td= ship_weapon.hardpoint_use
+        %td= ship_weapon.min_hull_class
+        %td= ship_weapon.tech_level
+        %td= ship_weapon.ap
+        %td= ship_weapon.clumsy
+        %td= ship_weapon.ammo_id
+        %td= ship_weapon.phase_rating
+        %td= ship_weapon.cloud
+        %td= link_to 'Show', ship_weapon
+        %td= link_to 'Edit', edit_ship_weapon_path(ship_weapon)
+        %td= link_to 'Destroy', ship_weapon, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Ship weapon', new_ship_weapon_path

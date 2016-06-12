@@ -1,0 +1,19 @@
+= form_for @technology_save_progression do |f|
+  - if @technology_save_progression.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@technology_save_progression.errors.count, "error")} prohibited this technology_save_progression from being saved:"
+      %ul
+        - @technology_save_progression.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :character_class_id
+    = f.number_field :character_class_id
+  .field
+    = f.label :level
+    = f.number_field :level
+  .field
+    = f.label :technology_save
+    = f.number_field :technology_save
+  .actions
+    = f.submit 'Save'
