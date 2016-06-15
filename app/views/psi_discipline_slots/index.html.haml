@@ -1,0 +1,23 @@
+%h1 Listing psi_discipline_slots
+
+%table
+  %thead
+    %tr
+      %th Character
+      %th Psi discipline
+      %th
+      %th
+      %th
+
+  %tbody
+    - @psi_discipline_slots.each do |psi_discipline_slot|
+      %tr
+        %td= psi_discipline_slot.character_id
+        %td= psi_discipline_slot.psi_discipline_id
+        %td= link_to 'Show', psi_discipline_slot
+        %td= link_to 'Edit', edit_psi_discipline_slot_path(psi_discipline_slot)
+        %td= link_to 'Destroy', psi_discipline_slot, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Psi discipline slot', new_psi_discipline_slot_path

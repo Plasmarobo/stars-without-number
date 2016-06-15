@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Planet:
+  = @planet_tag.planet_id
+%p
+  %b Tag:
+  = @planet_tag.tag_id
+
+= link_to 'Edit', edit_planet_tag_path(@planet_tag)
+\|
+= link_to 'Back', planet_tags_path

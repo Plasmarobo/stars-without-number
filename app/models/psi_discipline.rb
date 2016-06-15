@@ -1,2 +1,3 @@
 class PsiDiscipline < ApplicationRecord
+  
 end

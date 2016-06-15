@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Character:
+  = @ship_share.character_id
+%p
+  %b Ship:
+  = @ship_share.ship_id
+%p
+  %b Shares:
+  = @ship_share.shares
+
+= link_to 'Edit', edit_ship_share_path(@ship_share)
+\|
+= link_to 'Back', ship_shares_path

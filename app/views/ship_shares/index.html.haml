@@ -1,0 +1,25 @@
+%h1 Listing ship_shares
+
+%table
+  %thead
+    %tr
+      %th Character
+      %th Ship
+      %th Shares
+      %th
+      %th
+      %th
+
+  %tbody
+    - @ship_shares.each do |ship_share|
+      %tr
+        %td= ship_share.character_id
+        %td= ship_share.ship_id
+        %td= ship_share.shares
+        %td= link_to 'Show', ship_share
+        %td= link_to 'Edit', edit_ship_share_path(ship_share)
+        %td= link_to 'Destroy', ship_share, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Ship share', new_ship_share_path

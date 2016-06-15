@@ -4,7 +4,7 @@ class CreateNpcs < ActiveRecord::Migration[5.0]
       t.string :name
       t.integer :character_id
       t.integer :faction_id
-      t.itneger :planet_id
+      t.integer :planet_id
       t.integer :location_id
       t.integer :satellite_id
       t.integer :poi_id

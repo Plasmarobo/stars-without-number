@@ -1,0 +1,23 @@
+%h1 Listing planet_tags
+
+%table
+  %thead
+    %tr
+      %th Planet
+      %th Tag
+      %th
+      %th
+      %th
+
+  %tbody
+    - @planet_tags.each do |planet_tag|
+      %tr
+        %td= planet_tag.planet_id
+        %td= planet_tag.tag_id
+        %td= link_to 'Show', planet_tag
+        %td= link_to 'Edit', edit_planet_tag_path(planet_tag)
+        %td= link_to 'Destroy', planet_tag, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Planet tag', new_planet_tag_path

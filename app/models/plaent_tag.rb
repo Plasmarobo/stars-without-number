@@ -1,2 +1,0 @@
-class PlaentTag < ApplicationRecord
-end

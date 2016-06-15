@@ -1,0 +1,16 @@
+= form_for @planet_tag do |f|
+  - if @planet_tag.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@planet_tag.errors.count, "error")} prohibited this planet_tag from being saved:"
+      %ul
+        - @planet_tag.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :planet_id
+    = f.number_field :planet_id
+  .field
+    = f.label :tag_id
+    = f.number_field :tag_id
+  .actions
+    = f.submit 'Save'

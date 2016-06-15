@@ -1,2 +1,0 @@
-class PsiDisciplineSot < ApplicationRecord
-end

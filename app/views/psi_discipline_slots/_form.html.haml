@@ -1,0 +1,16 @@
+= form_for @psi_discipline_slot do |f|
+  - if @psi_discipline_slot.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@psi_discipline_slot.errors.count, "error")} prohibited this psi_discipline_slot from being saved:"
+      %ul
+        - @psi_discipline_slot.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :character_id
+    = f.number_field :character_id
+  .field
+    = f.label :psi_discipline_id
+    = f.number_field :psi_discipline_id
+  .actions
+    = f.submit 'Save'

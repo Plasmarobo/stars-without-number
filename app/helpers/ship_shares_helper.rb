@@ -1,0 +1,2 @@
+module ShipSharesHelper
+end
